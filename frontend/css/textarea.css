@@ -1,0 +1,28 @@
+.center {
+  text-align: center;
+}
+.textarea {
+  display: inline-block;
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  border: none;
+  background-color: transparent;
+  background: transparent;
+  vertical-align: top;
+  text-align: left;
+  font-size: 100%;
+  position: relative;
+  resize: none;
+}
+.textarea_container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 28px 52px 60px 24px;
+  border: 1px solid #c6cdd5;
+  transition: border 75ms ease-out;
+}
