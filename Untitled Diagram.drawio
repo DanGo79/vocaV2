@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-12-17T19:22:08.288Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="XHVUR-XoFzo_WKIowbRQ" version="15.9.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-17T19:23:18.510Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="QvWEw2t3CQvtkW297icy" version="15.9.6" type="github">
   <diagram id="N6lsiD8oopJrpO06N1Q2" name="Page-1">
-    <mxGraphModel dx="4209" dy="896" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4580" dy="1089" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -172,7 +172,7 @@
         <mxCell id="7HVum3_ixfd8tOSZu9AS-79" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SOVXefjvVhWVXNpoaT12-18">
           <mxGeometry y="400" width="520" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="7HVum3_ixfd8tOSZu9AS-80" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="7HVum3_ixfd8tOSZu9AS-79">
+        <mxCell id="7HVum3_ixfd8tOSZu9AS-80" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="7HVum3_ixfd8tOSZu9AS-79">
           <mxGeometry width="80" height="40" as="geometry">
             <mxRectangle width="80" height="40" as="alternateBounds" />
           </mxGeometry>
@@ -182,7 +182,7 @@
             <mxRectangle width="160" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7HVum3_ixfd8tOSZu9AS-82" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="7HVum3_ixfd8tOSZu9AS-79">
+        <mxCell id="7HVum3_ixfd8tOSZu9AS-82" value="User benutzt lernen" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="7HVum3_ixfd8tOSZu9AS-79">
           <mxGeometry x="240" width="280" height="40" as="geometry">
             <mxRectangle width="280" height="40" as="alternateBounds" />
           </mxGeometry>
