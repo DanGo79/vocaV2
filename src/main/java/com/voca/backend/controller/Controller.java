@@ -3,6 +3,7 @@ package com.voca.backend.controller;
 import com.voca.backend.request.VocabularyRequest;
 import com.voca.backend.service.VocabularyService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 @RestController

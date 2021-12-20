@@ -11,7 +11,7 @@ async function wordToTranslate() {
             'Content-Type': 'application/json'
         }
     }
-    console.log(options)
+    console.log(word)
     console.log(options)
 
     try {
@@ -30,9 +30,7 @@ async function wordToTranslate() {
     }
 
 
-    fetch(url, options)
-        .then(res => res.json())
-        .then(res => console.log(res))
+
 }
 
 //POST http://localhost:8080/search/searchEnglish

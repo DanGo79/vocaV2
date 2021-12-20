@@ -1,5 +1,6 @@
 package com.voca.backend.request;
 
+
 public class VocabularyRequest {
 
     private String nameEnglish;
