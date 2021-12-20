@@ -1,7 +1,7 @@
 
 
 function wordToTranslate() {
-    const url = "localhost:8080";
+    const url = "http//localhost:8080/search/searchEnglish";
 
     const word = document.getElementById("inputTextField").value;
 

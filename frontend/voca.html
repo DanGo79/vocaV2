@@ -5,19 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/textarea.css" />
+    <script src="js/scripts.js"></script>
     <title>VOCA</title>
   </head>
   <body>
     <div style="white-space: nowrap" class="center">
       <div style="display: inline-block">
         <textarea
-          oninput="wordToTranslate()"
           class="textarea_container textarea"
           id="inputTextField"
           cols="50"
           rows="10"
         ></textarea>
       </div>
+      <button onclick="wordToTranslate()">Translate</button>
       <div style="display: inline-block">
         <textarea
           class="textarea_container textarea"
