@@ -16,7 +16,7 @@ public class Controller {
         this.vocabularyService = vocabularyService;
     }
 
-    @GetMapping(path = "/")
+    @GetMapping(path = "/test")
     public String hello() {
         return "hallo";
     }
