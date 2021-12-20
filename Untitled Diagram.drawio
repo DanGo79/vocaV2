@@ -1,11 +1,11 @@
-<mxfile host="app.diagrams.net" modified="2021-12-20T09:42:16.910Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="KyhGak9-aYauAf9zyKlD" version="16.0.0" type="github">
+<mxfile host="app.diagrams.net" modified="2021-12-20T15:05:16.977Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.110 Safari/537.36" etag="4SbX28g08Qprdfp9G83-" version="16.0.0" type="github">
   <diagram id="N6lsiD8oopJrpO06N1Q2" name="Page-1">
     <mxGraphModel dx="4512" dy="1089" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="SOVXefjvVhWVXNpoaT12-18" value="Benutzer" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="-2400" y="80" width="520" height="480" as="geometry" />
+          <mxGeometry x="-2400" y="110" width="520" height="820" as="geometry" />
         </mxCell>
         <mxCell id="SOVXefjvVhWVXNpoaT12-19" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SOVXefjvVhWVXNpoaT12-18" vertex="1">
           <mxGeometry y="30" width="520" height="50" as="geometry" />
@@ -33,7 +33,7 @@
             <mxRectangle width="80" height="39" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-25" value="/user" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-23" vertex="1">
+        <mxCell id="SOVXefjvVhWVXNpoaT12-25" value="/users" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-23" vertex="1">
           <mxGeometry x="80" width="160" height="39" as="geometry">
             <mxRectangle width="160" height="39" as="alternateBounds" />
           </mxGeometry>
@@ -51,7 +51,7 @@
             <mxRectangle width="80" height="37" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-29" value="/user/:id" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-27" vertex="1">
+        <mxCell id="SOVXefjvVhWVXNpoaT12-29" value="/users/:id" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-27" vertex="1">
           <mxGeometry x="80" width="160" height="37" as="geometry">
             <mxRectangle width="160" height="37" as="alternateBounds" />
           </mxGeometry>
@@ -69,7 +69,7 @@
             <mxRectangle width="80" height="44" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-33" value="/user/:id" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-31" vertex="1">
+        <mxCell id="SOVXefjvVhWVXNpoaT12-33" value="/users/:id" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-31" vertex="1">
           <mxGeometry x="80" width="160" height="44" as="geometry">
             <mxRectangle width="160" height="44" as="alternateBounds" />
           </mxGeometry>
@@ -87,7 +87,7 @@
             <mxRectangle width="80" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-37" value="/user/:id" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-35" vertex="1">
+        <mxCell id="SOVXefjvVhWVXNpoaT12-37" value="/users/:id" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-35" vertex="1">
           <mxGeometry x="80" width="160" height="40" as="geometry">
             <mxRectangle width="160" height="40" as="alternateBounds" />
           </mxGeometry>
@@ -97,205 +97,256 @@
             <mxRectangle width="280" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-39" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SOVXefjvVhWVXNpoaT12-18" vertex="1">
-          <mxGeometry y="240" width="520" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-40" value="POST" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-39" vertex="1">
-          <mxGeometry width="80" height="40" as="geometry">
-            <mxRectangle width="80" height="40" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-41" value="/user/:id/Translation/:id" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-39" vertex="1">
-          <mxGeometry x="80" width="160" height="40" as="geometry">
-            <mxRectangle width="160" height="40" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-42" value="User gibt Suchwort in englisch ein" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-39" vertex="1">
-          <mxGeometry x="240" width="280" height="40" as="geometry">
-            <mxRectangle width="280" height="40" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="SOVXefjvVhWVXNpoaT12-43" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SOVXefjvVhWVXNpoaT12-18" vertex="1">
-          <mxGeometry y="280" width="520" height="40" as="geometry" />
+          <mxGeometry y="240" width="520" height="40" as="geometry" />
         </mxCell>
         <mxCell id="SOVXefjvVhWVXNpoaT12-44" value="GET" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-43" vertex="1">
           <mxGeometry width="80" height="40" as="geometry">
             <mxRectangle width="80" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-45" value="/user/:id/Translation" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-43" vertex="1">
+        <mxCell id="SOVXefjvVhWVXNpoaT12-45" value="/vocables?term=cat" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-43" vertex="1">
           <mxGeometry x="80" width="160" height="40" as="geometry">
             <mxRectangle width="160" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-46" value="&amp;nbsp;User bekommt Übersetzung in deutsch angezeigt" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-43" vertex="1">
+        <mxCell id="SOVXefjvVhWVXNpoaT12-46" value="&amp;nbsp;User macht Übersetzungsanfrage für ein englisches Wort und erhält deutsches Wort zurück" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-43" vertex="1">
           <mxGeometry x="240" width="280" height="40" as="geometry">
             <mxRectangle width="280" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="7HVum3_ixfd8tOSZu9AS-34" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SOVXefjvVhWVXNpoaT12-18" vertex="1">
-          <mxGeometry y="320" width="520" height="40" as="geometry" />
+          <mxGeometry y="280" width="520" height="40" as="geometry" />
         </mxCell>
         <mxCell id="7HVum3_ixfd8tOSZu9AS-35" value="POST" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-34" vertex="1">
           <mxGeometry width="80" height="40" as="geometry">
             <mxRectangle width="80" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7HVum3_ixfd8tOSZu9AS-36" value="/user/:id/Zuweisung" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-34" vertex="1">
+        <mxCell id="7HVum3_ixfd8tOSZu9AS-36" value="/users/:id/Zuordnung B_V***?term=cat" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-34" vertex="1">
           <mxGeometry x="80" width="160" height="40" as="geometry">
             <mxRectangle width="160" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7HVum3_ixfd8tOSZu9AS-37" value="&amp;nbsp;User speichert Vokabel" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-34" vertex="1">
+        <mxCell id="7HVum3_ixfd8tOSZu9AS-37" value="&amp;nbsp;User speichert Vokabel für ZuLernenListe" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-34" vertex="1">
+          <mxGeometry x="240" width="280" height="40" as="geometry">
+            <mxRectangle width="280" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-57" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SOVXefjvVhWVXNpoaT12-18">
+          <mxGeometry y="320" width="520" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-58" value="GET" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-57">
+          <mxGeometry width="80" height="40" as="geometry">
+            <mxRectangle width="80" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-59" value="/users/:id/Satz" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-57">
+          <mxGeometry x="80" width="160" height="40" as="geometry">
+            <mxRectangle width="160" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-60" value="Ein engl. Satz wird random angezeigt mit den deutschen Wort als addButtons darunter" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-57">
+          <mxGeometry x="240" width="280" height="40" as="geometry">
+            <mxRectangle width="280" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-61" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SOVXefjvVhWVXNpoaT12-18">
+          <mxGeometry y="360" width="520" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-62" value="POST" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-61">
+          <mxGeometry width="80" height="40" as="geometry">
+            <mxRectangle width="80" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-63" value="/users/:id/Zuordnung B_V" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-61">
+          <mxGeometry x="80" width="160" height="40" as="geometry">
+            <mxRectangle width="160" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-64" value="deut. Wort auf dem Button wird der B_V Liste hinzugefügt" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-61">
+          <mxGeometry x="240" width="280" height="40" as="geometry">
+            <mxRectangle width="280" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-65" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SOVXefjvVhWVXNpoaT12-18">
+          <mxGeometry y="400" width="520" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-66" value="POST" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-65">
+          <mxGeometry width="80" height="40" as="geometry">
+            <mxRectangle width="80" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-67" value="/users/:id/Zuordnung B_S" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-65">
+          <mxGeometry x="80" width="160" height="40" as="geometry">
+            <mxRectangle width="160" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-68" value="Satz der B_S Liste hinzufügen" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-65">
+          <mxGeometry x="240" width="280" height="40" as="geometry">
+            <mxRectangle width="280" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-69" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SOVXefjvVhWVXNpoaT12-18">
+          <mxGeometry y="440" width="520" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-70" value="GET" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-69">
+          <mxGeometry width="80" height="40" as="geometry">
+            <mxRectangle width="80" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-71" value="/users/:id/Zuordnung B_S" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-69">
+          <mxGeometry x="80" width="160" height="40" as="geometry">
+            <mxRectangle width="160" height="40" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-72" value="Satzliste(ZuLernenListe) des Users wird angezeigt" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-69">
           <mxGeometry x="240" width="280" height="40" as="geometry">
             <mxRectangle width="280" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="7HVum3_ixfd8tOSZu9AS-38" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SOVXefjvVhWVXNpoaT12-18" vertex="1">
-          <mxGeometry y="360" width="520" height="40" as="geometry" />
+          <mxGeometry y="480" width="520" height="40" as="geometry" />
         </mxCell>
         <mxCell id="7HVum3_ixfd8tOSZu9AS-39" value="GET" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-38" vertex="1">
           <mxGeometry width="80" height="40" as="geometry">
             <mxRectangle width="80" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7HVum3_ixfd8tOSZu9AS-40" value="/user/Zuweisung" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-38" vertex="1">
+        <mxCell id="7HVum3_ixfd8tOSZu9AS-40" value="/users/:id/Zuordnung B_V/zulernen_gelernt" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-38" vertex="1">
           <mxGeometry x="80" width="160" height="40" as="geometry">
             <mxRectangle width="160" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7HVum3_ixfd8tOSZu9AS-41" value="Vokabelliste des Users wird angezeigt" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-38" vertex="1">
+        <mxCell id="7HVum3_ixfd8tOSZu9AS-41" value="Vokabelliste(ZuLernenListe oder GelerntListe) des Users wird angezeigt" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-38" vertex="1">
           <mxGeometry x="240" width="280" height="40" as="geometry">
             <mxRectangle width="280" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="7HVum3_ixfd8tOSZu9AS-79" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SOVXefjvVhWVXNpoaT12-18" vertex="1">
-          <mxGeometry y="400" width="520" height="40" as="geometry" />
+          <mxGeometry y="520" width="520" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="7HVum3_ixfd8tOSZu9AS-80" value="" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-79" vertex="1">
+        <mxCell id="7HVum3_ixfd8tOSZu9AS-80" value="DELETE" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-79" vertex="1">
           <mxGeometry width="80" height="40" as="geometry">
             <mxRectangle width="80" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7HVum3_ixfd8tOSZu9AS-81" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-79" vertex="1">
+        <mxCell id="7HVum3_ixfd8tOSZu9AS-81" value="/users/:id/Zuordnung B_V" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-79" vertex="1">
           <mxGeometry x="80" width="160" height="40" as="geometry">
             <mxRectangle width="160" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7HVum3_ixfd8tOSZu9AS-82" value="User benutzt lernen" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-79" vertex="1">
+        <mxCell id="7HVum3_ixfd8tOSZu9AS-82" value="Vokabel komplett aus B_V Liste löschen" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-79" vertex="1">
           <mxGeometry x="240" width="280" height="40" as="geometry">
             <mxRectangle width="280" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="7HVum3_ixfd8tOSZu9AS-75" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SOVXefjvVhWVXNpoaT12-18" vertex="1">
-          <mxGeometry y="440" width="520" height="40" as="geometry" />
+          <mxGeometry y="560" width="520" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="7HVum3_ixfd8tOSZu9AS-76" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-75" vertex="1">
+        <mxCell id="7HVum3_ixfd8tOSZu9AS-76" value="PUT" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-75" vertex="1">
           <mxGeometry width="80" height="40" as="geometry">
             <mxRectangle width="80" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7HVum3_ixfd8tOSZu9AS-77" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-75" vertex="1">
+        <mxCell id="7HVum3_ixfd8tOSZu9AS-77" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 12px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;/users/:id/Zuordnung B_V&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-75" vertex="1">
           <mxGeometry x="80" width="160" height="40" as="geometry">
             <mxRectangle width="160" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7HVum3_ixfd8tOSZu9AS-78" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-75" vertex="1">
+        <mxCell id="7HVum3_ixfd8tOSZu9AS-78" value="Vokabel Parameter ZuLernen/ Gelernt ändern" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-75" vertex="1">
           <mxGeometry x="240" width="280" height="40" as="geometry">
             <mxRectangle width="280" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-47" value="Zuweisung Benutzer_ eigene Vokabeln" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="-2400" y="918" width="520" height="242" as="geometry" />
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-74" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SOVXefjvVhWVXNpoaT12-18">
+          <mxGeometry y="600" width="520" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-48" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SOVXefjvVhWVXNpoaT12-47" vertex="1">
-          <mxGeometry y="30" width="520" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-49" value="HTTP Methode" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=#f5f5f5;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#333333;strokeColor=#666666;" parent="SOVXefjvVhWVXNpoaT12-48" vertex="1">
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-75" value="GET" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-74">
           <mxGeometry width="80" height="50" as="geometry">
             <mxRectangle width="80" height="50" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-50" value="Route" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=#f5f5f5;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#333333;strokeColor=#666666;" parent="SOVXefjvVhWVXNpoaT12-48" vertex="1">
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-76" value="/users/:id/Zuordnung B_V/Vokabel/:id&amp;nbsp;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-74">
           <mxGeometry x="80" width="160" height="50" as="geometry">
             <mxRectangle width="160" height="50" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-51" value="Beschreibung" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=#f5f5f5;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#333333;strokeColor=#666666;" parent="SOVXefjvVhWVXNpoaT12-48" vertex="1">
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-77" value="Benutzer kann bestimmt Vokabel von seiner Liste(ZuLernenListe oder GelerntListe)&lt;br&gt;&amp;nbsp;aufrufen" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-74">
           <mxGeometry x="240" width="280" height="50" as="geometry">
             <mxRectangle width="280" height="50" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-60" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SOVXefjvVhWVXNpoaT12-47" vertex="1">
-          <mxGeometry y="80" width="520" height="41" as="geometry" />
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-83" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SOVXefjvVhWVXNpoaT12-18">
+          <mxGeometry y="650" width="520" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-61" value="PUT" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-60" vertex="1">
-          <mxGeometry width="80" height="41" as="geometry">
-            <mxRectangle width="80" height="41" as="alternateBounds" />
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-84" value="GET" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-83">
+          <mxGeometry width="80" height="50" as="geometry">
+            <mxRectangle width="80" height="50" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-62" value="/&lt;span&gt;Zuweisung&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-60" vertex="1">
-          <mxGeometry x="80" width="160" height="41" as="geometry">
-            <mxRectangle width="160" height="41" as="alternateBounds" />
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-85" value="&lt;br&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 12px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;/users/:id/Zuordnung B_V/Vokabel/random&lt;/span&gt;&lt;br&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-83">
+          <mxGeometry x="80" width="160" height="50" as="geometry">
+            <mxRectangle width="160" height="50" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-63" value="Bewertungspunktestand ändern" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-60" vertex="1">
-          <mxGeometry x="240" width="280" height="41" as="geometry">
-            <mxRectangle width="280" height="41" as="alternateBounds" />
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-86" value="&lt;span&gt;Benutzer kann Vokabeln random von seiner Liste(ZuLernenListe oder GelerntListe)&lt;/span&gt;&lt;br&gt;&lt;span&gt;&amp;nbsp;aufrufen&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-83">
+          <mxGeometry x="240" width="280" height="50" as="geometry">
+            <mxRectangle width="280" height="50" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-64" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SOVXefjvVhWVXNpoaT12-47" vertex="1">
-          <mxGeometry y="121" width="520" height="40" as="geometry" />
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-95" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SOVXefjvVhWVXNpoaT12-18">
+          <mxGeometry y="700" width="520" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-65" value="GET" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-64" vertex="1">
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-96" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-95">
           <mxGeometry width="80" height="40" as="geometry">
             <mxRectangle width="80" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-66" value="/Zuweisung/User/:id" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-64" vertex="1">
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-97" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-95">
           <mxGeometry x="80" width="160" height="40" as="geometry">
             <mxRectangle width="160" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-67" value="Zuweisungen eines Benutzers wird als Liste abgerufen" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-64" vertex="1">
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-98" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-95">
           <mxGeometry x="240" width="280" height="40" as="geometry">
             <mxRectangle width="280" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-68" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SOVXefjvVhWVXNpoaT12-47" vertex="1">
-          <mxGeometry y="161" width="520" height="40" as="geometry" />
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-91" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SOVXefjvVhWVXNpoaT12-18">
+          <mxGeometry y="740" width="520" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-69" value="DELETE" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-68" vertex="1">
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-92" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-91">
           <mxGeometry width="80" height="40" as="geometry">
             <mxRectangle width="80" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-70" value="/Zuweisung" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-68" vertex="1">
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-93" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-91">
           <mxGeometry x="80" width="160" height="40" as="geometry">
             <mxRectangle width="160" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-71" value="Zuweisung wird gelöscht" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-68" vertex="1">
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-94" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-91">
           <mxGeometry x="240" width="280" height="40" as="geometry">
             <mxRectangle width="280" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-72" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="SOVXefjvVhWVXNpoaT12-47" vertex="1">
-          <mxGeometry y="201" width="520" height="41" as="geometry" />
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-87" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="SOVXefjvVhWVXNpoaT12-18">
+          <mxGeometry y="780" width="520" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-73" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-72" vertex="1">
-          <mxGeometry width="80" height="41" as="geometry">
-            <mxRectangle width="80" height="41" as="alternateBounds" />
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-88" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-87">
+          <mxGeometry width="80" height="40" as="geometry">
+            <mxRectangle width="80" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-74" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-72" vertex="1">
-          <mxGeometry x="80" width="160" height="41" as="geometry">
-            <mxRectangle width="160" height="41" as="alternateBounds" />
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-89" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-87">
+          <mxGeometry x="80" width="160" height="40" as="geometry">
+            <mxRectangle width="160" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SOVXefjvVhWVXNpoaT12-75" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="SOVXefjvVhWVXNpoaT12-72" vertex="1">
-          <mxGeometry x="240" width="280" height="41" as="geometry">
-            <mxRectangle width="280" height="41" as="alternateBounds" />
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-90" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-87">
+          <mxGeometry x="240" width="280" height="40" as="geometry">
+            <mxRectangle width="280" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="SOVXefjvVhWVXNpoaT12-81" value="Authentifizierung" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
@@ -443,7 +494,7 @@
           <mxGeometry x="-650" y="1650" width="100" height="20" as="geometry" />
         </mxCell>
         <mxCell id="SOVXefjvVhWVXNpoaT12-224" value="Bewertungspunktestand wie gut gelernt BZW wie häfig anzeig" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-650" y="1680" width="219.5" height="50" as="geometry" />
+          <mxGeometry x="-650" y="1670" width="250" height="70" as="geometry" />
         </mxCell>
         <mxCell id="SOVXefjvVhWVXNpoaT12-226" value="id" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="-650" y="1590" width="100" height="20" as="geometry" />
@@ -523,8 +574,8 @@
             <mxPoint x="-417.57359312882227" y="1327.5735931288225" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7HVum3_ixfd8tOSZu9AS-2" value="Vokabel" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="-2400" y="638" width="520" height="234" as="geometry" />
+        <mxCell id="7HVum3_ixfd8tOSZu9AS-2" value="Sätze" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="-2390" y="1318" width="520" height="234" as="geometry" />
         </mxCell>
         <mxCell id="7HVum3_ixfd8tOSZu9AS-3" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="7HVum3_ixfd8tOSZu9AS-2" vertex="1">
           <mxGeometry y="30" width="520" height="44" as="geometry" />
@@ -552,12 +603,12 @@
             <mxRectangle width="80" height="39" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7HVum3_ixfd8tOSZu9AS-9" value="/Vokabel" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-7" vertex="1">
+        <mxCell id="7HVum3_ixfd8tOSZu9AS-9" value="/Sätze" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-7" vertex="1">
           <mxGeometry x="80" width="160" height="39" as="geometry">
             <mxRectangle width="160" height="39" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7HVum3_ixfd8tOSZu9AS-10" value="Vokabel wird erstellt" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-7" vertex="1">
+        <mxCell id="7HVum3_ixfd8tOSZu9AS-10" value="Satz wird erstellt" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-7" vertex="1">
           <mxGeometry x="240" width="280" height="39" as="geometry">
             <mxRectangle width="280" height="39" as="alternateBounds" />
           </mxGeometry>
@@ -570,12 +621,12 @@
             <mxRectangle width="80" height="37" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7HVum3_ixfd8tOSZu9AS-13" value="/Vokabel/:id" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-11" vertex="1">
+        <mxCell id="7HVum3_ixfd8tOSZu9AS-13" value="/Sätze/:id" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-11" vertex="1">
           <mxGeometry x="80" width="160" height="37" as="geometry">
             <mxRectangle width="160" height="37" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7HVum3_ixfd8tOSZu9AS-14" value="Vokabeldaten ändern" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-11" vertex="1">
+        <mxCell id="7HVum3_ixfd8tOSZu9AS-14" value="Satzdaten ändern" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-11" vertex="1">
           <mxGeometry x="240" width="280" height="37" as="geometry">
             <mxRectangle width="280" height="37" as="alternateBounds" />
           </mxGeometry>
@@ -588,12 +639,12 @@
             <mxRectangle width="80" height="38" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7HVum3_ixfd8tOSZu9AS-17" value="/Vokabel/:id" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-15" vertex="1">
+        <mxCell id="7HVum3_ixfd8tOSZu9AS-17" value="/Sätze/:id" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-15" vertex="1">
           <mxGeometry x="80" width="160" height="38" as="geometry">
             <mxRectangle width="160" height="38" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7HVum3_ixfd8tOSZu9AS-18" value="Vokabeldaten einer bestimmten Vokabel holen" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-15" vertex="1">
+        <mxCell id="7HVum3_ixfd8tOSZu9AS-18" value="Satzdaten eines bestimmten Satzes holen" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-15" vertex="1">
           <mxGeometry x="240" width="280" height="38" as="geometry">
             <mxRectangle width="280" height="38" as="alternateBounds" />
           </mxGeometry>
@@ -606,12 +657,12 @@
             <mxRectangle width="80" height="46" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7HVum3_ixfd8tOSZu9AS-21" value="/Vokabel/:id" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-19" vertex="1">
+        <mxCell id="7HVum3_ixfd8tOSZu9AS-21" value="/Sätze/:id" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-19" vertex="1">
           <mxGeometry x="80" width="160" height="46" as="geometry">
             <mxRectangle width="160" height="46" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="7HVum3_ixfd8tOSZu9AS-22" value="Vokabel wird gelöscht" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-19" vertex="1">
+        <mxCell id="7HVum3_ixfd8tOSZu9AS-22" value="Satz wird gelöscht" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="7HVum3_ixfd8tOSZu9AS-19" vertex="1">
           <mxGeometry x="240" width="280" height="46" as="geometry">
             <mxRectangle width="280" height="46" as="alternateBounds" />
           </mxGeometry>
@@ -625,8 +676,8 @@
             <mxPoint x="-1470" y="1440" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="_gnEER4y4tVQ6sH97-qz-1" value="&lt;font style=&quot;font-size: 16px&quot;&gt;Benutzer:&amp;nbsp; Benutzerkonto erstellen,verädern,löschen&lt;br&gt;&lt;br&gt;Benutzer kann Variable eingeben und übersetzen lassen&lt;br&gt;Benutzer soll diese Übersetzung speichern können&lt;br&gt;oder&lt;br&gt;Aus einer Liste mit den häufigsten Sätzen wird ein Satz angezeigt(englisch mit deutsch 1zu1 Übersetzung)&lt;br&gt;Benutzer kann Wörter aus dem Satz seiner Liste hinzufügen und den Satz einer persönlichen Satzliste hinzufügen&lt;br&gt;Benutzer soll Satzliste anzeigen lassen und Sätze aufrufen und löschen können&lt;br&gt;&lt;br&gt;Benutzer soll Liste seiner Übersetzungen(zuLernenListe) anzeigen lassen&lt;br&gt;Vokabeln aus der ZuLernenListe löschen(Vokabel komplett löschen)&lt;br&gt;&amp;nbsp;können oder auf eine gelernt Liste verschieben &lt;br&gt;Benutzer soll Gelerntliste anzeigen lassen&lt;br&gt;Vokabel von gelerntliste gelöschen (Vokabel komplett löschen) oder wieder auf die zuLernenListe verschieben&lt;br&gt;&lt;br&gt;Benutzer kann Vokabel auf der ZuLernenListe aufrufen oder zufällig wiedergeben lassen&lt;br&gt;und Vokabeln auf verschiedenen Wegen lernen&lt;br&gt;Die Wege:&lt;br&gt;1. Button mit englischem Wort wechselt bei Click zu deutschem Wort und umgedreht&lt;br&gt;2. Bild der Vokabel mit Button(1.) darunter&lt;br&gt;3. Bild mit Anzeige englisches Wort und Puzzelteile für Die Buchstaben vom deutschen Wort darunter&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="-1259.5" y="78" width="520" height="742" as="geometry" />
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-1" value="&lt;font style=&quot;font-size: 16px&quot;&gt;Benutzer:&lt;br&gt;&lt;br&gt;&amp;nbsp; Benutzerkonto erstellen, verädern, anzeigen oder löschen&lt;br&gt;&lt;br&gt;Benutzer kann Variable eingeben und übersetzen lassen&lt;br&gt;Benutzer soll diese Übersetzung speichern können&lt;br&gt;oder&lt;br&gt;Aus einer Liste mit den häufigsten Sätzen wird ein Satz angezeigt(englisch mit deutsch 1zu1 Übersetzung)&lt;br&gt;Benutzer kann Wörter aus dem Satz seiner ZuLernenListe hinzufügen und den Satz einer persönlichen Satzliste hinzufügen&lt;br&gt;Benutzer soll Satzliste anzeigen lassen und Sätze aufrufen und löschen können&lt;br&gt;&lt;br&gt;Benutzer soll Liste seiner Übersetzungen(zuLernenListe) anzeigen lassen&lt;br&gt;Vokabeln aus der ZuLernenListe löschen(Vokabel komplett löschen)&lt;br&gt;&amp;nbsp;können oder auf eine gelernt Liste verschieben &lt;br&gt;Benutzer soll Gelerntliste anzeigen lassen&lt;br&gt;Vokabel von Gelerntliste sollen gelöscht (Vokabel komplett löschen) oder wieder auf die zuLernenListe verschoben werden&lt;br&gt;&lt;br&gt;Benutzer kann Vokabel auf der ZuLernenListe aufrufen oder zufällig wiedergeben lassen&lt;br&gt;und Vokabeln auf verschiedenen Wegen lernen&lt;br&gt;Die Wege:&lt;br&gt;1. Button mit englischem Wort wechselt bei Click zu deutschem Wort und umgedreht&lt;br&gt;2. Bild der Vokabel mit Button(1.) darunter&lt;br&gt;3. Bild mit Anzeige englisches Wort und Puzzelteile für Die Buchstaben vom deutschen Wort darunter&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-1800" y="280" width="520" height="742" as="geometry" />
         </mxCell>
         <mxCell id="_gnEER4y4tVQ6sH97-qz-10" value="Vokabel ist auf ZuLernenListe / GelerntListe" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-650" y="1750" width="209.5" height="70" as="geometry" />
@@ -761,10 +812,103 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="_gnEER4y4tVQ6sH97-qz-51" value="&lt;font style=&quot;font-size: 16px&quot;&gt;Vokabeln:&amp;nbsp;&lt;br&gt;&lt;br&gt;Vokabel soll angelegt werden wenn noch nicht vorhanden&lt;br&gt;Vokabel kann geändert, gelöscht werden&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="-680" y="120" width="520" height="180" as="geometry" />
+          <mxGeometry x="-1890" y="989" width="520" height="180" as="geometry" />
         </mxCell>
         <mxCell id="_gnEER4y4tVQ6sH97-qz-52" value="&lt;font style=&quot;font-size: 16px&quot;&gt;Sätze:&amp;nbsp;&lt;br&gt;&lt;br&gt;Sätze sollen angelegt werden wenn noch nicht vorhanden&lt;br&gt;Satz kann geändert, gelöscht werden&lt;br&gt;&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="-680" y="320" width="520" height="180" as="geometry" />
+          <mxGeometry x="-1910" y="1130" width="520" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-99" value="Vokabeln" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-2390" y="1040" width="520" height="234" as="geometry" />
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-100" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-99">
+          <mxGeometry y="30" width="520" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-101" value="HTTP Methode" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=#f5f5f5;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-100">
+          <mxGeometry width="80" height="44" as="geometry">
+            <mxRectangle width="80" height="44" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-102" value="Route" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=#f5f5f5;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-100">
+          <mxGeometry x="80" width="160" height="44" as="geometry">
+            <mxRectangle width="160" height="44" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-103" value="Beschreibung" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=#f5f5f5;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontColor=#333333;strokeColor=#666666;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-100">
+          <mxGeometry x="240" width="280" height="44" as="geometry">
+            <mxRectangle width="280" height="44" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-104" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-99">
+          <mxGeometry y="74" width="520" height="39" as="geometry" />
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-105" value="POST" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-104">
+          <mxGeometry width="80" height="39" as="geometry">
+            <mxRectangle width="80" height="39" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-106" value="/Vokabeln" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-104">
+          <mxGeometry x="80" width="160" height="39" as="geometry">
+            <mxRectangle width="160" height="39" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-107" value="Vokabel wird erstellt" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-104">
+          <mxGeometry x="240" width="280" height="39" as="geometry">
+            <mxRectangle width="280" height="39" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-108" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-99">
+          <mxGeometry y="113" width="520" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-109" value="PUT" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-108">
+          <mxGeometry width="80" height="37" as="geometry">
+            <mxRectangle width="80" height="37" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-110" value="/Vokabeln/:id" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-108">
+          <mxGeometry x="80" width="160" height="37" as="geometry">
+            <mxRectangle width="160" height="37" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-111" value="Vokabeldaten ändern" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-108">
+          <mxGeometry x="240" width="280" height="37" as="geometry">
+            <mxRectangle width="280" height="37" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-112" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-99">
+          <mxGeometry y="150" width="520" height="38" as="geometry" />
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-113" value="GET" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-112">
+          <mxGeometry width="80" height="38" as="geometry">
+            <mxRectangle width="80" height="38" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-114" value="/Vokabeln/:id" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-112">
+          <mxGeometry x="80" width="160" height="38" as="geometry">
+            <mxRectangle width="160" height="38" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-115" value="Vokabeldaten einer bestimmten Vokabel holen" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-112">
+          <mxGeometry x="240" width="280" height="38" as="geometry">
+            <mxRectangle width="280" height="38" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-116" value="" style="shape=partialRectangle;collapsible=0;dropTarget=0;pointerEvents=0;fillColor=none;top=0;left=0;bottom=0;right=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-99">
+          <mxGeometry y="188" width="520" height="46" as="geometry" />
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-117" value="DELETE" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-116">
+          <mxGeometry width="80" height="46" as="geometry">
+            <mxRectangle width="80" height="46" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-118" value="/Vokabeln/:id" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-116">
+          <mxGeometry x="80" width="160" height="46" as="geometry">
+            <mxRectangle width="160" height="46" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_gnEER4y4tVQ6sH97-qz-119" value="Vokabel wird gelöscht" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="_gnEER4y4tVQ6sH97-qz-116">
+          <mxGeometry x="240" width="280" height="46" as="geometry">
+            <mxRectangle width="280" height="46" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
