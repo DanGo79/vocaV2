@@ -14,6 +14,8 @@ public class Vocabulary {
     @Lob
     private byte[] profilBild;
 
+
+
     public Vocabulary(String nameEnglish) {
         this.nameEnglish = nameEnglish;
     }
