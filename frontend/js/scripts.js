@@ -1,55 +1,46 @@
 
-/*
+
 async function wordToTranslate() {
-    const url = "http://localhost:8080/search/searchEnglish"
-    const data = { nameEnglish: document.getElementById("inputTextField").value }
-    const response = await fetch(url, {
-        method: 'POST', // *GET, POST, PUT, DELETE, etc.
-        mode: 'no-cors', // no-cors, *cors, same-origin
-        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data) // body data type must match "Content-Type" header
-    });
 
-
-    console.log(response)
-    if (response.ok) {
-        let data = await response.json()
-        console.log(data)
-
-    } else {
-        document.getElementById("translatedText").innerHTML = "Request war nicht erfolgreich. Statuscode:" + response.status + " " + response.statusText;
-    }
-}
-*/
-async function wordToTranslate() {
-    let word = document.getElementById("inputTextField").value
-    const url = "http://localhost:8080/search/searchEnglish/" + word
-
-    console.log(word)
+    const url = "http://localhost:8080/search/searchEnglish/" + document.getElementById("inputTextField").value
     console.log(url)
     const response = await fetch(url, {
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         mode: 'no-cors', // no-cors, *cors, same-origin
-        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-        // headers: {
-        //'Content-Type': 'application/json'
-        // },
-        //body: JSON.stringify(data) // body data type must match "Content-Type" header
+
     });
 
 
     console.log(response)
     if (response.ok) {
-        let data = await response.json()
-        console.log(data)
+
+        document.getElementById("translatedText").innerHTML = response.text;
 
     } else {
         document.getElementById("translatedText").innerHTML = "Request war nicht erfolgreich. Statuscode:" + response.status + " " + response.statusText;
     }
 }
+
+/*
+async function wordToTranslate() {
+
+    const word = document.getElementById("inputTextField").value;
+
+    const url = "http://localhost:8080/search/searchEnglish/Test"
+    let response = await fetch(url);
+    let responseText = await response.text();
+    console.log(responseText)
+    document.getElementById("translatedText").innerHTML = responseText;
+}
+
+(async () => {
+    await wordToTranslate();
+})();
+
+*/
+
+
+
 //async function wordToTranslate() {
 //    const word = document.getElementById("inputTextField").value;
 //    console.log(word)
