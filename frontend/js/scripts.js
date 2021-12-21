@@ -28,13 +28,15 @@ async function wordToTranslate() {
     let word = document.getElementById("inputTextField").value
     const url = "http://localhost:8080/search/searchEnglish/" + word
 
+    console.log(word)
+    console.log(url)
     const response = await fetch(url, {
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
         mode: 'no-cors', // no-cors, *cors, same-origin
         cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-        headers: {
-            'Content-Type': 'application/json'
-        },
+        // headers: {
+        //'Content-Type': 'application/json'
+        // },
         //body: JSON.stringify(data) // body data type must match "Content-Type" header
     });
 
