@@ -17,16 +17,23 @@ public class Controller {
         this.vocabularyService = vocabularyService;
     }
 
-    @GetMapping(path = "/test")
+    @GetMapping(path = "/")
     public String hello() {
         return "hallo";
     }
 
-    @PostMapping(path = "/searchEnglish")
+    @GetMapping("/searchEnglish/{nameEnglish}")
+    public String searchEnglish(@PathVariable String nameEnglish){
+        VocabularyRequest vr = new VocabularyRequest(nameEnglish);
+        return vocabularyService.searchEnglish(vr);
+    }
+
+    /*
+    @GetMapping(value = "/searchEnglish", consumes = {"application/json"})
     public String searchEnglish(@RequestBody VocabularyRequest vocabularyRequest) {
         return vocabularyService.searchEnglish(vocabularyRequest);
     }
-
+*/
 
 }
 

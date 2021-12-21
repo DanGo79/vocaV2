@@ -1,46 +1,53 @@
 
-
+/*
 async function wordToTranslate() {
     const url = "http://localhost:8080/search/searchEnglish"
-    const word = { nameEnglish: document.getElementById("inputTextField").value }
-    const options = {
-        method: 'POST',
-        mode: 'no-cors',
-        body: JSON.stringify(word),
+    const data = { nameEnglish: document.getElementById("inputTextField").value }
+    const response = await fetch(url, {
+        method: 'POST', // *GET, POST, PUT, DELETE, etc.
+        mode: 'no-cors', // no-cors, *cors, same-origin
+        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
         headers: {
             'Content-Type': 'application/json'
-        }
+        },
+        body: JSON.stringify(data) // body data type must match "Content-Type" header
+    });
+
+
+    console.log(response)
+    if (response.ok) {
+        let data = await response.json()
+        console.log(data)
+
+    } else {
+        document.getElementById("translatedText").innerHTML = "Request war nicht erfolgreich. Statuscode:" + response.status + " " + response.statusText;
     }
-    console.log(word)
-    console.log(options)
-
-    try {
-        let response = await fetch(url, options)
-        console.log(response)
-        if (response.ok) {
-            let data = await response.json()
-            console.log(data)
-
-        } else {
-            document.getElementById("translatedText").innerHTML = "Request war nicht erfolgreich. Statuscode:" + response.status + " " + response.statusText;
-        }
-
-    } catch (err) {
-        document.getElementById("translatedText").innerHTML = err.massage;
-    }
-
-
-
 }
+*/
+async function wordToTranslate() {
+    let word = document.getElementById("inputTextField").value
+    const url = "http://localhost:8080/search/searchEnglish/" + word
 
-//POST http://localhost:8080/search/searchEnglish
-//Content-Type: application/json
+    const response = await fetch(url, {
+        method: 'GET', // *GET, POST, PUT, DELETE, etc.
+        mode: 'no-cors', // no-cors, *cors, same-origin
+        cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        //body: JSON.stringify(data) // body data type must match "Content-Type" header
+    });
 
-//{
-//  "nameEnglish" : "Mahir"
 
-//}
+    console.log(response)
+    if (response.ok) {
+        let data = await response.json()
+        console.log(data)
 
+    } else {
+        document.getElementById("translatedText").innerHTML = "Request war nicht erfolgreich. Statuscode:" + response.status + " " + response.statusText;
+    }
+}
 //async function wordToTranslate() {
 //    const word = document.getElementById("inputTextField").value;
 //    console.log(word)
