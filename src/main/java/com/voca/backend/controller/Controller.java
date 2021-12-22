@@ -1,6 +1,7 @@
 package com.voca.backend.controller;
 
 import com.voca.backend.request.VocabularyRequest;
+import com.voca.backend.request.VocabularyRequestWith2Name;
 import com.voca.backend.service.VocabularyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -23,10 +24,18 @@ public class Controller {
     }
 
     @GetMapping("/searchEnglish/{nameEnglish}")
-    public String searchEnglish(@PathVariable String nameEnglish){
+    public String searchEnglish(@PathVariable String nameEnglish) {
         VocabularyRequest vr = new VocabularyRequest(nameEnglish);
         return vocabularyService.searchEnglish(vr);
+
     }
+
+    @PostMapping(path = "/addVocabulary")
+    public String addVocabulary(@RequestBody VocabularyRequestWith2Name vocabularyRequestWith2Name) {
+        return vocabularyService.addVocabulary(vocabularyRequestWith2Name);
+
+    }
+
 
     /*
     @GetMapping(value = "/searchEnglish", consumes = {"application/json"})

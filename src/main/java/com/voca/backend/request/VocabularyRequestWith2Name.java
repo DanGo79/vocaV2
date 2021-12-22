@@ -1,23 +1,19 @@
 package com.voca.backend.request;
 
 
-public class VocabularyRequest {
+public class VocabularyRequestWith2Name {
 
     private String nameEnglish;
     private String nameGerman;
 
 
-    public VocabularyRequest() {
+    public VocabularyRequestWith2Name() {
     }
 
-    public VocabularyRequest(String nameEnglish) {
+    public VocabularyRequestWith2Name(String nameEnglish, String nameGerman) {
         this.nameEnglish = nameEnglish;
+        this.nameGerman = nameGerman;
     }
-
-//    public VocabularyRequest(String nameEnglish, String nameGerman) {
-//        this.nameEnglish = nameEnglish;
-//        this.nameGerman = nameGerman;
-//    }
 
     public String getNameEnglish() {
         return nameEnglish;
