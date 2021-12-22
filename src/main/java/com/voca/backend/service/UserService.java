@@ -19,13 +19,11 @@ public class UserService {
     }
 
     public String userRegistration(User user) {
-
         if (userRepo.findByEmail(user.getEmail()).isPresent()) {
             throw new IllegalStateException("Die Email ist bereits vergeben");
         } else {
             userRepo.save(user);
             return "Benutzer wurde erfolgreich gespeichert.";
-
         }
     }
 
@@ -34,10 +32,16 @@ public class UserService {
                 userRequest.getUsername(),
                 userRequest.getEmail(),
                 userRequest.getPassword()
-
         ));
     }
 
-
-
+    public User getUser(UserRequest userRequest) {
+        if (userRequest.getUsername() != null) {
+            return userRepo.findByUsername(userRequest.getUsername()).get();
+        }
+        if (userRequest.getEmail() != null) {
+            return userRepo.findByEmail(userRequest.getEmail()).get();
+        }
+        return null;
+    }
 }

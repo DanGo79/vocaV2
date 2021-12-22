@@ -17,14 +17,14 @@ public class UserConfig {
         this.userRepo = userRepo;
     }
 
-    @Bean
-    CommandLineRunner commandLineRunnerUser(){
-    return args -> {
-        User user1 = new User("DanGo","dasdafd@dfas.com","Voca123");
-        userRepo.save(user1);
-    };
+//    @Bean
+//    CommandLineRunner commandLineRunnerUser(){
+//    return args -> {
+//        User user1 = new User("DanGo","dasdafd@dfas.com","Voca123");
+//        userRepo.save(user1);
+//    };
 
-}
+//}
 
 }
 

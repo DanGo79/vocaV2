@@ -1,13 +1,11 @@
 package com.voca.backend.controller;
 
 
+import com.voca.backend.Entity.User;
 import com.voca.backend.request.UserRequest;
 import com.voca.backend.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(path = "/User")
@@ -24,5 +22,10 @@ public class UserController {
     public String userRegistration(@RequestBody UserRequest userRequest) {
         return userService.registration(userRequest);
 
+    }
+
+    @GetMapping(path = "/getUser")
+    public User getUser(@RequestBody UserRequest userRequest) {
+        return userService.getUser(userRequest);
     }
 }
