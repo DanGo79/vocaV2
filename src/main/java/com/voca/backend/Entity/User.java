@@ -4,7 +4,7 @@ package com.voca.backend.Entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "User")
+@Table(name = "Users")
 public class User {
 
     @Id
@@ -14,8 +14,15 @@ public class User {
     private String nachname;
     private String adresse;
     private String username;
+    private Integer password;
     @Column(unique = true)
     private String email;
+
+    public User(String username, Integer password, String email) {
+        this.username = username;
+        this.password = password;
+        this.email = email;
+    }
 
     public Integer getId() {
         return id;
@@ -35,5 +42,21 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getVorname() {
+        return vorname;
+    }
+
+    public String getNachname() {
+        return nachname;
+    }
+
+    public String getAdresse() {
+        return adresse;
+    }
+
+    public Integer getPassword() {
+        return password;
     }
 }

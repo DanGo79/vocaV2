@@ -4,6 +4,7 @@ package com.voca.backend.service;
 import com.voca.backend.Entity.Vocabulary;
 import com.voca.backend.repository.VocabularyRepo;
 import com.voca.backend.request.VocabularyRequest;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.Optional;
 @Service
 public class VocabularyService {
 
+    @Autowired
     private final VocabularyRepo vocabularyRepo;
 
     public VocabularyService(VocabularyRepo vocabularyRepo) {
@@ -34,20 +36,6 @@ public class VocabularyService {
             return vocabularySearch.getNameGerman();
         }
     }
-
-//    public Vocabulary searchVocabulary(Vocabulary vocabularySearch) {
-//
-//        Optional<Vocabulary> foundVocabulary = vocabularyRepo.findByNameEnglish(vocabularySearch.getNameEnglish());
-//        if(foundVocabulary.isPresent()) {
-//            return foundVocabulary.get();
-//        }
-//
-//        Optional<Vocabulary> foundVocabulary1 = vocabularyRepo.findByNameGerman(vocabularySearch.getNameGerman());
-//        if(foundVocabulary1.isPresent()) {
-//            return foundVocabulary1.get();
-//        }
-//       return null;
-//    }
 
     public String searchEnglish(VocabularyRequest vocabularyRequest) {
         return searchEnglishVocabulary(new Vocabulary(vocabularyRequest.getNameEnglish()));
