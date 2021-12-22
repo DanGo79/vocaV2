@@ -6,7 +6,7 @@ async function wordToTranslate() {
     console.log(url)
     const response = await fetch(url, {
         method: 'GET', // *GET, POST, PUT, DELETE, etc.
-        mode: 'no-cors', // no-cors, *cors, same-origin
+        // mode: 'cors', // no-cors, *cors, same-origin
 
     });
 
@@ -14,7 +14,7 @@ async function wordToTranslate() {
     console.log(response)
     if (response.ok) {
 
-        document.getElementById("translatedText").innerHTML = response.text;
+        document.getElementById("translatedText").innerHTML = await response.text();
 
     } else {
         document.getElementById("translatedText").innerHTML = "Request war nicht erfolgreich. Statuscode:" + response.status + " " + response.statusText;
