@@ -3,19 +3,11 @@
 async function wordToTranslate() {
 
     const url = "http://localhost:8080/search/searchEnglish/" + document.getElementById("inputTextField").value
-    console.log(url)
     const response = await fetch(url, {
-        method: 'GET', // *GET, POST, PUT, DELETE, etc.
-        // mode: 'cors', // no-cors, *cors, same-origin
-
+        method: 'GET'
     });
-
-
-    console.log(response)
     if (response.ok) {
-
         document.getElementById("translatedText").innerHTML = await response.text();
-
     } else {
         document.getElementById("translatedText").innerHTML = "Request war nicht erfolgreich. Statuscode:" + response.status + " " + response.statusText;
     }
@@ -23,8 +15,6 @@ async function wordToTranslate() {
 
 async function createVoca() {
     const url = 'http://localhost:8080/search/addVocabulary';
-
-
     const data = {
         nameEnglish: document.getElementById("englishVoca").value,
         nameGerman: document.getElementById("germanVoca").value
@@ -36,7 +26,6 @@ async function createVoca() {
             'Content-Type': 'application/json'
         }
     }
-    console.log(data)
     fetch(url, options)
         .then(res => res.json())
         .then(res => console.log(res))
@@ -45,8 +34,6 @@ async function createVoca() {
     let element = document.createElement('p')
     element.innerHTML = response.json();
     parent.appendChild(element)
-
-
 }
 //    try {
 //         const response = await fetch(url, options);
