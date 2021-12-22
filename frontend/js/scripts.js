@@ -21,6 +21,26 @@ async function wordToTranslate() {
     }
 }
 
+async function createVoca() {
+    const url = 'http://localhost:8080/search/addVocabulary';
+
+
+    const data = {
+        nameGerman: document.getElementById("germanVoca").value,
+        nameEnglish: document.getElementById("englishVoca").value,
+    };
+    const options = {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
+    fetch(url, options)
+        .then(res => res.json())
+        .then(res => console.log(res));
+}
+
 /*
 async function wordToTranslate() {
 
