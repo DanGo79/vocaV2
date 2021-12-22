@@ -43,7 +43,7 @@ async function createVoca() {
 
     let parent = document.getElementById('list')
     let element = document.createElement('p')
-    element.innerHTML = res.json()
+    element.innerHTML = response.json();
     parent.appendChild(element)
 
 }
