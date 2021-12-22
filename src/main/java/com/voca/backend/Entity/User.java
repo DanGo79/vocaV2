@@ -15,11 +15,10 @@ public class User {
     private String adresse;
     private String username;
     private String password;
-    @Column(unique = true)
+    //@Column(unique = true)
     private String email;
 
     public User() {
-
     }
 
     public User(String username, String email, String password) {
