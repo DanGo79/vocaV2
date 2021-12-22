@@ -14,14 +14,18 @@ public class User {
     private String nachname;
     private String adresse;
     private String username;
-    private Integer password;
+    private String password;
     @Column(unique = true)
     private String email;
 
-    public User(String username, Integer password, String email) {
+    public User() {
+
+    }
+
+    public User(String username, String email, String password) {
         this.username = username;
-        this.password = password;
         this.email = email;
+        this.password = password;
     }
 
     public Integer getId() {
@@ -56,7 +60,7 @@ public class User {
         return adresse;
     }
 
-    public Integer getPassword() {
+    public String getPassword() {
         return password;
     }
 }

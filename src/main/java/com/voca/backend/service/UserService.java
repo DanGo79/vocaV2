@@ -1,8 +1,12 @@
 package com.voca.backend.service;
 
+import com.voca.backend.Entity.User;
 import com.voca.backend.repository.UserRepo;
+import com.voca.backend.request.UserRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class UserService {
@@ -14,8 +18,26 @@ public class UserService {
         this.userRepo = userRepo;
     }
 
-public String userRegistration() {
-        return null;
-}
+    public String userRegistration(User user) {
+
+        if (userRepo.findByEmail(user.getEmail()).isPresent()) {
+            throw new IllegalStateException("Die Email ist bereits vergeben");
+        } else {
+            userRepo.save(user);
+            return "Benutzer wurde erfolgreich gespeichert.";
+
+        }
+    }
+
+    public String registration(UserRequest userRequest) {
+        return userRegistration(new User(
+                userRequest.getUsername(),
+                userRequest.getEmail(),
+                userRequest.getPassword()
+
+        ));
+
+
+    }
 
 }

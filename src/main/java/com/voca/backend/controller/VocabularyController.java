@@ -9,13 +9,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/search")
-public class Controller {
+@RequestMapping(path = "/Vocabulary")
+public class VocabularyController {
 
     @Autowired
     private final VocabularyService vocabularyService;
 
-    public Controller(VocabularyService vocabularyService) {
+    public VocabularyController(VocabularyService vocabularyService) {
         this.vocabularyService = vocabularyService;
     }
 
