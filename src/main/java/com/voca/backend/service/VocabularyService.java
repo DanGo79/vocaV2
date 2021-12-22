@@ -4,9 +4,9 @@ package com.voca.backend.service;
 import com.voca.backend.Entity.Vocabulary;
 import com.voca.backend.repository.VocabularyRepo;
 import com.voca.backend.request.VocabularyRequest;
-import com.voca.backend.request.VocabularyRequestWith2Name;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -39,10 +39,12 @@ public class VocabularyService {
         return searchEnglishVocabulary(new Vocabulary(vocabularyRequest.getNameEnglish()));
     }
 
-    public String addVocabulary(VocabularyRequestWith2Name vocabularyRequestWith2Name) {
-        Vocabulary newVocabulary = new Vocabulary(vocabularyRequestWith2Name.getNameEnglish(),vocabularyRequestWith2Name.getNameGerman());
+    public Vocabulary addVocabulary(VocabularyRequest vocabularyRequest) {
+        Vocabulary newVocabulary = new Vocabulary(vocabularyRequest.getNameEnglish(),vocabularyRequest.getNameGerman());
         vocabularyRepo.save(newVocabulary);
-        return newVocabulary.toString();
+        return newVocabulary;
     }
+
+//    public List vocabularyList ()
 
 }

@@ -46,7 +46,17 @@ async function createVoca() {
     element.innerHTML = response.json();
     parent.appendChild(element)
 
+
 }
+//    try {
+//         const response = await fetch(url, options);
+//         if(response.ok) {
+//             const json = await response.json();
+//             console.log(json.id);
+//         }
+//     } catch(err) {
+//
+//     }
 
 /*
 async function wordToTranslate() {

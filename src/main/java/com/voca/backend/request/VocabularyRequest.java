@@ -14,10 +14,6 @@ public class VocabularyRequest {
         this.nameEnglish = nameEnglish;
     }
 
-//    public VocabularyRequest(String nameEnglish, String nameGerman) {
-//        this.nameEnglish = nameEnglish;
-//        this.nameGerman = nameGerman;
-//    }
 
     public String getNameEnglish() {
         return nameEnglish;
