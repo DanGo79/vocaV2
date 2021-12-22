@@ -26,8 +26,8 @@ async function createVoca() {
 
 
     const data = {
-        nameGerman: document.getElementById("germanVoca").value,
         nameEnglish: document.getElementById("englishVoca").value,
+        nameGerman: document.getElementById("germanVoca").value
     };
     const options = {
         method: 'POST',
@@ -36,6 +36,7 @@ async function createVoca() {
             'Content-Type': 'application/json'
         }
     }
+    console.log(data)
     fetch(url, options)
         .then(res => res.json())
         .then(res => console.log(res));
