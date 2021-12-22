@@ -35,6 +35,20 @@ public class VocabularyService {
         }
     }
 
+//    public Vocabulary searchVocabulary(Vocabulary vocabularySearch) {
+//
+//        Optional<Vocabulary> foundVocabulary = vocabularyRepo.findByNameEnglish(vocabularySearch.getNameEnglish());
+//        if(foundVocabulary.isPresent()) {
+//            return foundVocabulary.get();
+//        }
+//
+//        Optional<Vocabulary> foundVocabulary1 = vocabularyRepo.findByNameGerman(vocabularySearch.getNameGerman());
+//        if(foundVocabulary1.isPresent()) {
+//            return foundVocabulary1.get();
+//        }
+//       return null;
+//    }
+
     public String searchEnglish(VocabularyRequest vocabularyRequest) {
         return searchEnglishVocabulary(new Vocabulary(vocabularyRequest.getNameEnglish()));
     }
@@ -45,6 +59,13 @@ public class VocabularyService {
         return newVocabulary;
     }
 
-//    public List vocabularyList ()
+    public List getVocabularyList() {
+        return vocabularyRepo.findAll();
+    }
+
+    public void deleteVocabulay(Integer id) {
+       vocabularyRepo.deleteById(id);
+    }
+
 
 }

@@ -12,6 +12,7 @@ public interface VocabularyRepo extends JpaRepository<Vocabulary, Integer> {
 
     Optional<Vocabulary> findByNameEnglish(String nameEnglish);
 
+    Optional<Vocabulary> findByNameGerman(String nameGerman);
 
 
 }
