@@ -13,8 +13,36 @@ async function wordToTranslate() {
     }
 }
 
+function createVocabularyHtml(json) {
+    let container = document.createElement("div");
+    let p = document.createElement("p");
+    p.innerHTML = json;
+
+    let deleteButton = document.createElement("button");
+    deleteButton.innerHTML = "Löschen";
+    deleteButton.onclick = async () => {
+        //vom server löschen
+        //throw new Exception("hallo");
+        await deleteVocabulary()
+
+        //aktuelle id -> json.id
+
+        //aus html löschen
+        container.parentElement.removeChild(container);
+    }
+
+    let modifyButton = document.createElement("button");
+    modifyButton.innerHTML = "Bearbeiten";
+
+    container.appendChild(p);
+    container.appendChild(deleteButton);
+    container.appendChild(modifyButton);
+
+    return container;
+}
+
 async function createVoca() {
-    const url = 'http://localhost:8080/search/addVocabulary';
+    const url = 'http://localhost:8080/Vocabulary/addVocabulary';
     const data = {
         nameEnglish: document.getElementById("englishVoca").value,
         nameGerman: document.getElementById("germanVoca").value
@@ -26,14 +54,35 @@ async function createVoca() {
             'Content-Type': 'application/json'
         }
     }
+    /**
     fetch(url, options)
         .then(res => res.json())
-        .then(res => console.log(res))
+        .then(res => { console.log(res); return res })
+        .then(json => {
+            var text = JSON.stringify(json)
+            document.getElementById('list').innerHTML = text;
+        })
+        */
 
-    let parent = document.getElementById('list')
-    let element = document.createElement('p')
-    element.innerHTML = response.json();
-    parent.appendChild(element)
+    try {
+        const response = await fetch(url, options);
+        if (response.ok) {
+            const json = await response.json();
+            console.log(json);
+            var text = JSON.stringify(json)
+            let container = createVocabularyHtml(text);
+            document.getElementById('list').appendChild(container);
+        } else {
+            //Ungültiger Statuscode - Fehler ausgeben
+        }
+    } catch (err) {
+        //Netzwerkfehler oder fehler beim parsen von json - Fehler ausgeben
+    }
+
+    //let parent = document.getElementById('list')
+    //let element = document.createElement('p')
+    //element.innerHTML = response.json();
+    //parent.appendChild(element)
 }
 //    try {
 //         const response = await fetch(url, options);
