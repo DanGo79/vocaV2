@@ -35,12 +35,15 @@ public class VocabularyController {
         return vocabularyService.addVocabulary(vocabularyRequest);
     }
 
-    @DeleteMapping(path = "/deleteVocabulay")
+    @DeleteMapping(path = "/deleteVocabulary")
     public String deleteVocabulay(@RequestBody VocabularyRequest vocabularyRequest) {
         return vocabularyService.deleteVocabulay(vocabularyRequest);
     }
 
-//    @PutMapping(path = "/putVocabuly")
+    @PutMapping(path = "/putVocabulary")
+    public Vocabulary putVocabulary(@RequestBody VocabularyRequest vocabularyRequest) {
+        return vocabularyService.putVocabulary(vocabularyRequest);
+    }
 }
 
 
