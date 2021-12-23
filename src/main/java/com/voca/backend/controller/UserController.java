@@ -28,4 +28,9 @@ public class UserController {
     public User getUser(@RequestBody UserRequest userRequest) {
         return userService.getUser(userRequest);
     }
+
+    @DeleteMapping(path = "/deleteUser")
+    public String deleteUser(@RequestBody UserRequest userRequest) {
+        return userService.deleteUser(userRequest);
+    }
 }

@@ -44,4 +44,11 @@ public class UserService {
         }
         return null;
     }
+
+    public String deleteUser(UserRequest userRequest) {
+        userRepo.deleteById(userRequest.getId());
+        return "Der Benutzer wurde gelöscht.";
+    }
+
+
 }

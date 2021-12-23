@@ -51,8 +51,9 @@ public class VocabularyService {
         return vocabularyRepo.findAll();
     }
 
-    public void deleteVocabulay(Integer id) {
-       vocabularyRepo.deleteById(id);
+    public String deleteVocabulay(VocabularyRequest vocabularyRequest) {
+       vocabularyRepo.deleteById(vocabularyRequest.getId());
+       return "Die Vokabel wurde gelöscht.";
     }
 
 

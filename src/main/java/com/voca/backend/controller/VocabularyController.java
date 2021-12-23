@@ -35,18 +35,10 @@ public class VocabularyController {
         return vocabularyService.addVocabulary(vocabularyRequest);
     }
 
-    @DeleteMapping(path = "/deleteVocabulay/{id}")
-    public void deleteVocabulay(@PathVariable Integer id) {
-        vocabularyService.deleteVocabulay(id);
+    @DeleteMapping(path = "/deleteVocabulay")
+    public String deleteVocabulay(@RequestBody VocabularyRequest vocabularyRequest) {
+        return vocabularyService.deleteVocabulay(vocabularyRequest);
     }
-
-
-    /*
-    @GetMapping(value = "/searchEnglish", consumes = {"application/json"})
-    public String searchEnglish(@RequestBody VocabularyRequest vocabularyRequest) {
-        return vocabularyService.searchEnglish(vocabularyRequest);
-    }
-*/
 
 }
 
