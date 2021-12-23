@@ -59,9 +59,9 @@ public class UserService {
             if (userRequest.getUsername() != null) {
                 foundUser.setUsername(userRequest.getUsername());
             }
-            if (userRequest.getEmail() != null) {
-                foundUser.setEmail(userRequest.getEmail());
-            }
+//            if (userRequest.getEmail() != null) {
+//                foundUser.setEmail(userRequest.getEmail());
+//            }
             if (userRequest.getPassword() != null) {
                 foundUser.setPassword(userRequest.getPassword());
             }

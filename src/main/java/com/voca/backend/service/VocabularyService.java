@@ -20,11 +20,11 @@ public class VocabularyService {
         this.vocabularyRepo = vocabularyRepo;
     }
 
-    public String searchEnglishVocabulary(Vocabulary vocabularySearch) {
+    public Vocabulary searchEnglishVocabulary(Vocabulary vocabularySearch) {
 
         Optional<Vocabulary> foundVocabulary = vocabularyRepo.findByNameEnglish(vocabularySearch.getNameEnglish());
         if (foundVocabulary.isPresent()) {
-            return foundVocabulary.get().getNameGerman();
+            return foundVocabulary.get();
         } else {
             //rufe mit API bei DeepL das deutsche Wort ab
             // https://api-free.deepl.com/v2/translate?auth_key=9dcff541-835a-4c05-6b9c-2d7a6ed73d2b&text=Cat&target_lang=de&source_lang=en
@@ -34,11 +34,11 @@ public class VocabularyService {
             } catch (Exception exc) {
             }
 
-            return vocabularySearch.getNameGerman();
+            return vocabularySearch;
         }
     }
 
-    public String searchEnglish(VocabularyRequest vocabularyRequest) {
+    public Vocabulary searchEnglish(VocabularyRequest vocabularyRequest) {
         return searchEnglishVocabulary(new Vocabulary(vocabularyRequest.getNameEnglish()));
     }
 

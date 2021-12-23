@@ -25,7 +25,7 @@ public class VocabularyController {
     }
 
     @GetMapping("/searchEnglish/{nameEnglish}")
-    public String searchEnglish(@PathVariable String nameEnglish) {
+    public Vocabulary searchEnglish(@PathVariable String nameEnglish) {
         VocabularyRequest vr = new VocabularyRequest(nameEnglish);
         return vocabularyService.searchEnglish(vr);
     }
