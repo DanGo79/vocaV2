@@ -6,6 +6,7 @@ import com.voca.backend.service.VocabularyService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -24,10 +25,9 @@ public class VocabularyController {
         return vocabularyService.getVocabularyList();
     }
 
-    @GetMapping("/searchEnglish/{nameEnglish}")
-    public Vocabulary searchEnglish(@PathVariable String nameEnglish) {
-        VocabularyRequest vr = new VocabularyRequest(nameEnglish);
-        return vocabularyService.searchEnglish(vr);
+    @GetMapping("/searchEnglish")
+    public Vocabulary searchEnglish(@RequestBody VocabularyRequest vocabularyRequest){
+        return vocabularyService.searchEnglish(vocabularyRequest);
     }
 
     @PostMapping(path = "/addVocabulary")
