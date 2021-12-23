@@ -52,21 +52,24 @@ public class UserService {
         return "Der Benutzer wurde gelöscht.";
     }
 
-//    public User putUser(VocabularyRequest vocabularyRequest) {
-//        Optional<Vocabulary> foundVocabularyOp = vocabularyRepo.findById(vocabularyRequest.getId());
-//        if (foundVocabularyOp.isPresent()) {
-//            Vocabulary foundVocabulary = foundVocabularyOp.get();
-//            if (vocabularyRequest.getNameGerman() != null) {
-//                foundVocabulary.setNameGerman(vocabularyRequest.getNameGerman());
-//            }
-//            if (vocabularyRequest.getNameEnglish() != null) {
-//                foundVocabulary.setNameEnglish(vocabularyRequest.getNameEnglish());
-//            }
-//            vocabularyRepo.save(foundVocabulary);
-//            return foundVocabulary;
-//        }
-//        return null;
-//    }
+    public User putUser(UserRequest userRequest) {
+        Optional<User> foundUserOp = userRepo.findById(userRequest.getId());
+        if (foundUserOp.isPresent()) {
+            User foundUser = foundUserOp.get();
+            if (userRequest.getUsername() != null) {
+                foundUser.setUsername(userRequest.getUsername());
+            }
+            if (userRequest.getEmail() != null) {
+                foundUser.setEmail(userRequest.getEmail());
+            }
+            if (userRequest.getPassword() != null) {
+                foundUser.setPassword(userRequest.getPassword());
+            }
+            userRepo.save(foundUser);
+            return foundUser;
+        }
+        return null;
+    }
 
 
 }

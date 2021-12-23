@@ -21,7 +21,6 @@ public class UserController {
     @PostMapping(path = "/userRegistration")
     public String userRegistration(@RequestBody UserRequest userRequest) {
         return userService.registration(userRequest);
-
     }
 
     @GetMapping(path = "/getUser")
@@ -33,4 +32,10 @@ public class UserController {
     public String deleteUser(@RequestBody UserRequest userRequest) {
         return userService.deleteUser(userRequest);
     }
+
+    @PutMapping(path = "/putUser")
+    public User putUser(@RequestBody UserRequest userRequest) {
+        return userService.putUser(userRequest);
+    }
+
 }

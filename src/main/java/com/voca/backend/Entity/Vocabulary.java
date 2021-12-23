@@ -4,7 +4,7 @@ package com.voca.backend.Entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "Vocabulary")
+@Table(name = "Vocabularies")
 public class Vocabulary {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

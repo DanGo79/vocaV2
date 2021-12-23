@@ -21,7 +21,7 @@ public class VocabularyConfig {
     @Bean
     CommandLineRunner commandLineRunnerVocab() {
         return args -> {
-                Vocabulary vocabulary1 = new Vocabulary("Repository", "Speicherort");
+            Vocabulary vocabulary1 = new Vocabulary("Repository", "Speicherort");
 
 
 //                vocabularyRepo.saveAll(
