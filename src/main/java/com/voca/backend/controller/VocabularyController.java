@@ -40,6 +40,7 @@ public class VocabularyController {
         return vocabularyService.deleteVocabulay(vocabularyRequest);
     }
 
+//    @PutMapping(path = "/putVocabuly")
 }
 
 
