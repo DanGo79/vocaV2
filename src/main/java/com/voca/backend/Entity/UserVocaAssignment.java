@@ -4,21 +4,21 @@ package com.voca.backend.Entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "UserVocabularyAssignment")
+@Table(name = "UserVocaAssignment")
 public class UserVocaAssignment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private Integer userId;
-    private Integer vocabularyId;
-    private Integer lernen_gelernt = 1;
+    private Integer vocaId;
+    private Integer lernenGelernt = 1;
 
     public UserVocaAssignment() {
     }
 
     public UserVocaAssignment(Integer userId, Integer vocabularyId) {
         this.userId = userId;
-        this.vocabularyId = vocabularyId;
+        this.vocaId = vocabularyId;
     }
 
     public Integer getId() {
@@ -30,15 +30,15 @@ public class UserVocaAssignment {
     }
 
     public Integer getVocabularyId() {
-        return vocabularyId;
+        return vocaId;
     }
 
     public Integer getLernen_gelernt() {
-        return lernen_gelernt;
+        return lernenGelernt;
     }
 
     public void setLernen_gelernt(Integer lernen_gelernt) {
-        this.lernen_gelernt = lernen_gelernt;
+        this.lernenGelernt = lernen_gelernt;
     }
 
     public void setUserId(Integer userId) {
@@ -46,6 +46,6 @@ public class UserVocaAssignment {
     }
 
     public void setVocabularyId(Integer vocabularyId) {
-        this.vocabularyId = vocabularyId;
+        this.vocaId = vocabularyId;
     }
 }

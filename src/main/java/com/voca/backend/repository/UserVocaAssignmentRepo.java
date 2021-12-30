@@ -10,9 +10,9 @@ import java.util.Optional;
 @Repository
 public interface UserVocaAssignmentRepo extends JpaRepository<UserVocaAssignment, Integer> {
 
-    Optional<UserVocaAssignment> findDistinctByUserIdAndVocabularyId(Integer userId, Integer vocabularyId);
+  Optional<UserVocaAssignment> findDistinctByUserIdAndVocaId(Integer userId,Integer vocaId);
 
-    Optional<UserVocaAssignment> findDistinctByUserIdAndLernen_gelernt(Integer userId, Integer lernen_gelernt);
+   Optional<UserVocaAssignment> findDistinctByUserIdAndLernenGelernt(Integer userId, Integer lernenGelernt);
 
 //    @Query ("SELECT userId from ")
 

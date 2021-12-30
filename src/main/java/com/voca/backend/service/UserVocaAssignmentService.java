@@ -22,7 +22,7 @@ public class UserVocaAssignmentService {
 
     public String addAssignment(UserVocaAssignmentRequest userVocabularyAssignmentRequest){
         Optional<UserVocaAssignment> userVocabularyAssignment =
-                userVocabularyAssignmentRepo.findDistinctByUserIdAndVocabularyId(
+                userVocabularyAssignmentRepo.findDistinctByUserIdAndVocaId(
                         userVocabularyAssignmentRequest.getUserId(),
                         userVocabularyAssignmentRequest.getVocabularyId());
         if (userVocabularyAssignment.isPresent()) {
