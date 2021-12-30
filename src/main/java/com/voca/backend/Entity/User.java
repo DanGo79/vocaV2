@@ -9,7 +9,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Integer userId;
     private String vorname;
     private String nachname;
     private String adresse;
@@ -28,7 +28,7 @@ public class User {
     }
 
     public Integer getId() {
-        return id;
+        return userId;
     }
 
     public String getUsername() {
