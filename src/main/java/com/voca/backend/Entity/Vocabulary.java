@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class Vocabulary {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer VocaId;
+    private Integer vocaId;
     private String nameEnglish;
     private String nameGerman;
     @Lob
@@ -27,7 +27,7 @@ public class Vocabulary {
     }
 
     public Integer getId() {
-        return VocaId;
+        return vocaId;
     }
 
     public String getNameEnglish() {
