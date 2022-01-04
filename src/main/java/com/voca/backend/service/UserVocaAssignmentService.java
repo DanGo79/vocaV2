@@ -52,10 +52,10 @@ public class UserVocaAssignmentService {
         return "Die Vokabel wurde aus deiner Liste gelöscht.";
     }
 
-//    public List getAssignmentList(UserVocaAssignmentRequest userVocaAssignmentRequest) {
-//        //return userVocabularyAssignmentRepo.findDistinctByUserIdAndLernen_gelernt(userVocaAssignmentRequest.getUserId(), userVocaAssignmentRequest.getLernen_gelernt());
-//
-//    }
+    public List getAssignmentList(UserVocaAssignmentRequest userVocaAssignmentRequest) {
+        return userVocabularyAssignmentRepo.findAll(UserI);
+
+    }
 
 
 }
