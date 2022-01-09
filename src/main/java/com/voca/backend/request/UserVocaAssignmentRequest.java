@@ -5,7 +5,7 @@ public class UserVocaAssignmentRequest {
     private Integer id;
     private Integer userId;
     private Integer vocabularyId;
-    private Integer lernen_gelernt;
+    private Integer lernenGelernt;
 
     public UserVocaAssignmentRequest() {
     }
@@ -18,8 +18,8 @@ public class UserVocaAssignmentRequest {
         return vocabularyId;
     }
 
-    public Integer getLernen_gelernt() {
-        return lernen_gelernt;
+    public Integer getLernenGelernt() {
+        return lernenGelernt;
     }
 
     public Integer getId() {

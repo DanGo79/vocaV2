@@ -1,7 +1,9 @@
 package com.voca.backend.service;
 
 import com.voca.backend.Entity.UserVocaAssignment;
+import com.voca.backend.Entity.Vocabulary;
 import com.voca.backend.repository.UserVocaAssignmentRepo;
+import com.voca.backend.repository.VocabularyRepo;
 import com.voca.backend.request.UserRequest;
 import com.voca.backend.request.UserVocaAssignmentRequest;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +44,7 @@ public class UserVocaAssignmentService {
 
     public String changeList(UserVocaAssignmentRequest userVocaAssignmentRequest) {
         Optional<UserVocaAssignment> userVocaAssignment = userVocabularyAssignmentRepo.findById(userVocaAssignmentRequest.getId());
-        userVocaAssignment.get().setLernen_gelernt(userVocaAssignmentRequest.getLernen_gelernt());
+        userVocaAssignment.get().setLernen_gelernt(userVocaAssignmentRequest.getLernenGelernt());
         userVocabularyAssignmentRepo.save(userVocaAssignment.get());
         return "Die Vokabel wurde verschoben.";
     }
@@ -53,7 +55,10 @@ public class UserVocaAssignmentService {
     }
 
     public List getAssignmentList(UserVocaAssignmentRequest userVocaAssignmentRequest) {
-        return userVocabularyAssignmentRepo.findAll(UserI);
+        return userVocabularyAssignmentRepo.findAllByUserIdAndLernenGelernt(userVocaAssignmentRequest.getUserId(), userVocaAssignmentRequest.getLernenGelernt());
+
+
+
 
     }
 
