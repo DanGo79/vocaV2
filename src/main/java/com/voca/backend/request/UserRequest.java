@@ -4,7 +4,7 @@ import javax.persistence.Column;
 
 public class UserRequest {
 
-    private Integer id;
+    private Integer userId;
     private String username;
     private String email;
     private String password;
@@ -31,6 +31,6 @@ public class UserRequest {
     }
 
     public Integer getId() {
-        return id;
+        return userId;
     }
 }
