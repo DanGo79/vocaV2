@@ -3,22 +3,12 @@ package com.voca.backend.request;
 public class UserVocaAssignmentRequest {
 
     private Integer id;
-    private Integer userId;
-    private Integer vocabularyId;
-    private Integer lernenGelernt;
+    private boolean lernenGelernt;
 
     public UserVocaAssignmentRequest() {
     }
 
-    public Integer getUserId() {
-        return userId;
-    }
-
-    public Integer getVocabularyId() {
-        return vocabularyId;
-    }
-
-    public Integer getLernenGelernt() {
+    public boolean getLernenGelernt() {
         return lernenGelernt;
     }
 

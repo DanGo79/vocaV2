@@ -21,9 +21,9 @@ public class UserVocaAssignmentController {
         this.userVocaAssignmentService = userVocaAssignmentService;
     }
 
-    @PostMapping(path = "/addAssignment")
-    public String addAssignment(@RequestBody UserVocaAssignmentRequest userVocaAssignmentRequest) {
-        return userVocaAssignmentService.addAssignment(userVocaAssignmentRequest);
+    @PostMapping(path = "/addAssignment/{userId}/{vocaId}")
+    public String addAssignment(@RequestBody UserVocaAssignmentRequest userVocaAssignmentRequest, @PathVariable Integer userId,@PathVariable Integer vocaId) {
+        return userVocaAssignmentService.addAssignment(userVocaAssignmentRequest,userId,vocaId);
     }
 
     @PutMapping(path = "/changeList")
@@ -36,9 +36,9 @@ public class UserVocaAssignmentController {
         return userVocaAssignmentService.deleteAssignment(userVocaAssignmentRequest);
     }
 
-    @GetMapping(path = "/getAssignmentList")
-    public List getAssignmentList(@RequestBody UserVocaAssignmentRequest userVocaAssignmentRequest) {
-        return userVocaAssignmentService.getAssignmentList(userVocaAssignmentRequest);
+    @GetMapping(path = "/getAssignmentList/{userId}")
+    public List getAssignmentList(@RequestBody UserVocaAssignmentRequest userVocaAssignmentRequest, @PathVariable Integer userId) {
+        return userVocaAssignmentService.getAssignmentList(userVocaAssignmentRequest,userId);
     }
 
 

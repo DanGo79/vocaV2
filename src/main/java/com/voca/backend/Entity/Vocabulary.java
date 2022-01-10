@@ -1,18 +1,25 @@
 package com.voca.backend.Entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "Vocabularies")
 public class Vocabulary {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer vocaId;
+    private Integer id;
     private String nameEnglish;
     private String nameGerman;
     @Lob
     private byte[] profilBild;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "vocabulary")
+    private Set<UserVocaAssignment> userVocaAssignmentSet;
 
     public Vocabulary() {
     }
@@ -27,7 +34,7 @@ public class Vocabulary {
     }
 
     public Integer getId() {
-        return vocaId;
+        return id;
     }
 
     public String getNameEnglish() {

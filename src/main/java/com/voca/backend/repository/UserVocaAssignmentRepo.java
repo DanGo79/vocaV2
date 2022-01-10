@@ -14,13 +14,14 @@ import java.util.Optional;
 @Repository
 public interface UserVocaAssignmentRepo extends JpaRepository<UserVocaAssignment, Integer> {
 
-    Optional<UserVocaAssignment> findDistinctByUserIdAndVocaId(Integer userId, Integer vocaId);
+    Optional<UserVocaAssignment> findDistinctByUserAndVocabulary(Integer userId, Integer vocaId);
 
-//    @Query("SELECT a FROM UserVocaAssignment a where a.userId = ?1 and a.lernenGelernt = ?2 ")
-//    List<UserVocaAssignment> findAllByUserIdAndLernenGelernt(Integer userId, Integer lernenGelernt);
 
-    @Query(value = "SELECT b.nameEnglish, b.nameGerman FROM UserVocaAssignment a inner join Vocabulary b on a.vocaId = b.vocaId where a.userId = ?1 and a.lernenGelernt = ?2 ")
-    List<Object> findAllByUserIdAndLernenGelernt(Integer userId, Integer lernenGelernt);
+    //    @Query("SELECT a FROM UserVocaAssignment a where a.userId = ?1 and a.lernenGelernt = ?2 ")
+    List<UserVocaAssignment> findAllByUserAndLernenGelernt(Integer userId, boolean lernenGelernt);
+
+//    @Query(value = "SELECT b.nameEnglish, b.nameGerman FROM UserVocaAssignment a inner join Vocabulary b on a.vocaId = b.vocaId where a.userId = ?1 and a.lernenGelernt = ?2 ")
+//    List<Object> findAllByUserIdAndLernenGelernt(Integer userId, boolean lernenGelernt);
 
 }
 //SELECT *

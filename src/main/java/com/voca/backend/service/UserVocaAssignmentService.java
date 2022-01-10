@@ -1,7 +1,9 @@
 package com.voca.backend.service;
 
+import com.voca.backend.Entity.User;
 import com.voca.backend.Entity.UserVocaAssignment;
 import com.voca.backend.Entity.Vocabulary;
+import com.voca.backend.repository.UserRepo;
 import com.voca.backend.repository.UserVocaAssignmentRepo;
 import com.voca.backend.repository.VocabularyRepo;
 import com.voca.backend.request.UserRequest;
@@ -17,22 +19,27 @@ public class UserVocaAssignmentService {
 
     @Autowired
     private final UserVocaAssignmentRepo userVocabularyAssignmentRepo;
+    private final UserRepo userRepo;
+    private final VocabularyRepo vocabularyRepo;
 
-    public UserVocaAssignmentService(UserVocaAssignmentRepo userVocabularyAssignmentRepo) {
+    public UserVocaAssignmentService(UserVocaAssignmentRepo userVocabularyAssignmentRepo, UserRepo userRepo, VocabularyRepo vocabularyRepo) {
         this.userVocabularyAssignmentRepo = userVocabularyAssignmentRepo;
+        this.userRepo = userRepo;
+        this.vocabularyRepo = vocabularyRepo;
     }
 
-    public String addAssignment(UserVocaAssignmentRequest userVocabularyAssignmentRequest){
+    public String addAssignment(UserVocaAssignmentRequest userVocabularyAssignmentRequest, Integer userId, Integer vocaId){
+
+        User user = userRepo.getById(userId);
+        Vocabulary vocabulary = vocabularyRepo.getById(vocaId);
         Optional<UserVocaAssignment> userVocabularyAssignment =
-                userVocabularyAssignmentRepo.findDistinctByUserIdAndVocaId(
-                        userVocabularyAssignmentRequest.getUserId(),
-                        userVocabularyAssignmentRequest.getVocabularyId());
+                userVocabularyAssignmentRepo.findDistinctByUserAndVocabulary(userId, vocaId);
         if (userVocabularyAssignment.isPresent()) {
             return "Die Vokabel befindet sich bereits in deiner Liste.";
         } else {
-            UserVocaAssignment userVocaAssignment = new UserVocaAssignment();
-            userVocaAssignment.setUserId(userVocabularyAssignmentRequest.getUserId());
-            userVocaAssignment.setVocabularyId((userVocabularyAssignmentRequest.getVocabularyId()));
+            UserVocaAssignment userVocaAssignment = new UserVocaAssignment(userVocabularyAssignmentRequest.getLernenGelernt());
+            userVocaAssignment.setUser(user);
+            userVocaAssignment.setVocabulary(vocabulary);
             try {
                 userVocabularyAssignmentRepo.save(userVocaAssignment);
             } catch (Exception exc) {
@@ -44,7 +51,7 @@ public class UserVocaAssignmentService {
 
     public String changeList(UserVocaAssignmentRequest userVocaAssignmentRequest) {
         Optional<UserVocaAssignment> userVocaAssignment = userVocabularyAssignmentRepo.findById(userVocaAssignmentRequest.getId());
-        userVocaAssignment.get().setLernen_gelernt(userVocaAssignmentRequest.getLernenGelernt());
+        userVocaAssignment.get().setLernenGelernt(userVocaAssignmentRequest.getLernenGelernt());
         userVocabularyAssignmentRepo.save(userVocaAssignment.get());
         return "Die Vokabel wurde verschoben.";
     }
@@ -54,8 +61,8 @@ public class UserVocaAssignmentService {
         return "Die Vokabel wurde aus deiner Liste gelöscht.";
     }
 
-    public List getAssignmentList(UserVocaAssignmentRequest userVocaAssignmentRequest) {
-        return userVocabularyAssignmentRepo.findAllByUserIdAndLernenGelernt(userVocaAssignmentRequest.getUserId(), userVocaAssignmentRequest.getLernenGelernt());
+    public List getAssignmentList(UserVocaAssignmentRequest userVocaAssignmentRequest, Integer userId) {
+        return userVocabularyAssignmentRepo.findAllByUserAndLernenGelernt(userId, userVocaAssignmentRequest.getLernenGelernt());
 
 
 

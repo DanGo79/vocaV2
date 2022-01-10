@@ -6,46 +6,59 @@ import javax.persistence.*;
 @Entity
 @Table(name = "UserVocaAssignment")
 public class UserVocaAssignment {
-    @Id
+    @EmbeddedId
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-    private Integer userId;
-    private Integer vocaId;
-    private Integer lernenGelernt = 1;
+    UserVocaAssignmentKey id;
+
+    @ManyToOne
+    @MapsId("vocaId")
+    @JoinColumn(name = "voca_id")
+    private Vocabulary vocabulary;
+
+    @ManyToOne
+    @MapsId("userId")
+    @JoinColumn(name = "user_id")
+    private User user;
+
+    private boolean lernenGelernt = true;
 
     public UserVocaAssignment() {
     }
 
-    public UserVocaAssignment(Integer userId, Integer vocabularyId) {
-        this.userId = userId;
-        this.vocaId = vocabularyId;
+    public UserVocaAssignment(boolean lernenGelernt) {
+        this.lernenGelernt = lernenGelernt;
     }
 
-    public Integer getId() {
+    public UserVocaAssignmentKey getId() {
         return id;
     }
 
-    public Integer getUserId() {
-        return userId;
+    public void setId(UserVocaAssignmentKey id) {
+        this.id = id;
     }
 
-    public Integer getVocabularyId() {
-        return vocaId;
+    public Vocabulary getVocabulary() {
+        return vocabulary;
     }
 
-    public Integer getLernen_gelernt() {
+    public void setVocabulary(Vocabulary vocabulary) {
+        this.vocabulary = vocabulary;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public boolean isLernenGelernt() {
         return lernenGelernt;
     }
 
-    public void setLernen_gelernt(Integer lernen_gelernt) {
-        this.lernenGelernt = lernen_gelernt;
+    public void setLernenGelernt(boolean lernenGelernt) {
+        this.lernenGelernt = lernenGelernt;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
-
-    public void setVocabularyId(Integer vocabularyId) {
-        this.vocaId = vocabularyId;
-    }
 }

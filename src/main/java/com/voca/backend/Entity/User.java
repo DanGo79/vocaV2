@@ -1,7 +1,10 @@
 package com.voca.backend.Entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "Users")
@@ -9,7 +12,7 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer userId;
+    private Integer id;
     private String vorname;
     private String nachname;
     private String adresse;
@@ -17,6 +20,11 @@ public class User {
     private String password;
     //@Column(unique = true)
     private String email;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "user")
+    private Set<UserVocaAssignment> userVocaAssignmentSet;
+
 
     public User() {
     }
@@ -28,7 +36,7 @@ public class User {
     }
 
     public Integer getId() {
-        return userId;
+        return id;
     }
 
     public String getUsername() {

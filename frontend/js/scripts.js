@@ -2,7 +2,8 @@
 
 async function wordToTranslate() {
 
-    const url = "http://localhost:8080/search/searchEnglish/" + document.getElementById("inputTextField").value
+    const url = "http://localhost:8080/search/searchEnglish/"
+     + document.getElementById("inputTextField").value
     const response = await fetch(url, {
         method: 'GET'
     });

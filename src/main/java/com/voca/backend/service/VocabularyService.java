@@ -36,8 +36,8 @@ public class VocabularyService {
             return foundVocabulary.get();
         } else {
             Vocabulary vocabularySearch = new Vocabulary(nameEnglish);
-            vocabularySearch.setNameGerman(translateWord(nameEnglish));
-            //vocabularySearch.setNameGerman("Wort Deutsch");
+            //vocabularySearch.setNameGerman(translateWord(nameEnglish));
+            vocabularySearch.setNameGerman("Wort Deutsch");
             try {
                 vocabularyRepo.save(vocabularySearch);
             } catch (Exception exc) {
