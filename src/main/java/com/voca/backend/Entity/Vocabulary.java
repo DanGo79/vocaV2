@@ -19,7 +19,7 @@ public class Vocabulary {
 
     @JsonIgnore
     @OneToMany(mappedBy = "vocabulary")
-    private Set<UserVocaAssignment> userVocaAssignmentSet;
+    Set<UserVocaAssignment> userVocaAssignment;
 
     public Vocabulary() {
     }
@@ -59,5 +59,13 @@ public class Vocabulary {
 
     public void setProfilBild(byte[] profilBild) {
         this.profilBild = profilBild;
+    }
+
+    public Set<UserVocaAssignment> getUserVocaAssignment() {
+        return userVocaAssignment;
+    }
+
+    public void setUserVocaAssignment(Set<UserVocaAssignment> userVocaAssignment) {
+        this.userVocaAssignment = userVocaAssignment;
     }
 }

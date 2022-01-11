@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class VocaApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(VocaApplication.class, args);
+       SpringApplication.run(VocaApplication.class, args);
 
 
     }

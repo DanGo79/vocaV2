@@ -3,7 +3,7 @@ package com.voca.backend.request;
 
 public class VocabularyRequest {
 
-    private Integer vocaId;
+    private Integer id;
     private String nameEnglish;
     private String nameGerman;
 
@@ -25,6 +25,6 @@ public class VocabularyRequest {
     }
 
     public Integer getId() {
-        return vocaId;
+        return id;
     }
 }

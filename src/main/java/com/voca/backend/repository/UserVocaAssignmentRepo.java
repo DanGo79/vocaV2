@@ -1,5 +1,6 @@
 package com.voca.backend.repository;
 
+import com.voca.backend.Entity.User;
 import com.voca.backend.Entity.UserVocaAssignment;
 import com.voca.backend.Entity.Vocabulary;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -18,7 +19,7 @@ public interface UserVocaAssignmentRepo extends JpaRepository<UserVocaAssignment
 
 
     //    @Query("SELECT a FROM UserVocaAssignment a where a.userId = ?1 and a.lernenGelernt = ?2 ")
-    List<UserVocaAssignment> findAllByUserAndLernenGelernt(Integer userId, boolean lernenGelernt);
+    List<UserVocaAssignment> findAllByUserAndLernenGelernt(Integer userId, Integer lernenGelernt);
 
 //    @Query(value = "SELECT b.nameEnglish, b.nameGerman FROM UserVocaAssignment a inner join Vocabulary b on a.vocaId = b.vocaId where a.userId = ?1 and a.lernenGelernt = ?2 ")
 //    List<Object> findAllByUserIdAndLernenGelernt(Integer userId, boolean lernenGelernt);

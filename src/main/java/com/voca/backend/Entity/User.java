@@ -23,7 +23,7 @@ public class User {
 
     @JsonIgnore
     @OneToMany(mappedBy = "user")
-    private Set<UserVocaAssignment> userVocaAssignmentSet;
+    Set<UserVocaAssignment> userVocaAssignment;
 
 
     public User() {
@@ -85,5 +85,13 @@ public class User {
 
     public void setAdresse(String adresse) {
         this.adresse = adresse;
+    }
+
+    public Set<UserVocaAssignment> getUserVocaAssignment() {
+        return userVocaAssignment;
+    }
+
+    public void setUserVocaAssignment(Set<UserVocaAssignment> userVocaAssignment) {
+        this.userVocaAssignment = userVocaAssignment;
     }
 }

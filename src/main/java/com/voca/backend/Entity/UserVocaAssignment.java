@@ -6,26 +6,26 @@ import javax.persistence.*;
 @Entity
 @Table(name = "UserVocaAssignment")
 public class UserVocaAssignment {
-    @EmbeddedId
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    UserVocaAssignmentKey id;
 
-    @ManyToOne
-    @MapsId("vocaId")
-    @JoinColumn(name = "voca_id")
-    private Vocabulary vocabulary;
+    @EmbeddedId
+    UserVocaAssignmentKey id = new UserVocaAssignmentKey();
 
     @ManyToOne
     @MapsId("userId")
     @JoinColumn(name = "user_id")
-    private User user;
+    User user;
 
-    private boolean lernenGelernt = true;
+    @ManyToOne
+    @MapsId("vocaId")
+    @JoinColumn(name = "voca_id")
+    Vocabulary vocabulary;
+
+    Integer lernenGelernt = 1;
 
     public UserVocaAssignment() {
     }
 
-    public UserVocaAssignment(boolean lernenGelernt) {
+    public UserVocaAssignment(Integer lernenGelernt) {
         this.lernenGelernt = lernenGelernt;
     }
 
@@ -37,14 +37,6 @@ public class UserVocaAssignment {
         this.id = id;
     }
 
-    public Vocabulary getVocabulary() {
-        return vocabulary;
-    }
-
-    public void setVocabulary(Vocabulary vocabulary) {
-        this.vocabulary = vocabulary;
-    }
-
     public User getUser() {
         return user;
     }
@@ -53,12 +45,19 @@ public class UserVocaAssignment {
         this.user = user;
     }
 
-    public boolean isLernenGelernt() {
+    public Vocabulary getVocabulary() {
+        return vocabulary;
+    }
+
+    public void setVocabulary(Vocabulary vocabulary) {
+        this.vocabulary = vocabulary;
+    }
+
+    public Integer getLernenGelernt() {
         return lernenGelernt;
     }
 
-    public void setLernenGelernt(boolean lernenGelernt) {
+    public void setLernenGelernt(Integer lernenGelernt) {
         this.lernenGelernt = lernenGelernt;
     }
-
 }

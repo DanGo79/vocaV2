@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Embeddable
-class UserVocaAssignmentKey implements Serializable {
+public class UserVocaAssignmentKey implements Serializable {
 
     @Column(name = "user_id")
     Integer userId;
@@ -16,12 +16,7 @@ class UserVocaAssignmentKey implements Serializable {
     @Column(name = "voca_id")
     Integer vocaId;
 
-    UserVocaAssignmentKey() {
-    }
-
-    public UserVocaAssignmentKey(Integer userId, Integer vocaId) {
-        this.userId = userId;
-        this.vocaId = vocaId;
+    public UserVocaAssignmentKey() {
     }
 
     public Integer getUserId() {
