@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/textarea.css" rel="stylesheet" />
+    <script src="js/translate.js"></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Translate</title>
+  </head>
+  <body>
+    <section class="py-5">
+      <div style="white-space: nowrap" class="center">
+        <div style="display: inline-block">
+          <textarea
+            class="textarea_container textarea"
+            id="inputTextField"
+            cols="25"
+            rows="1"
+          ></textarea>
+          <input type="text" name="englisches Wort" id="englishWord" />
+        </div>
+        <button onclick="wordToTranslate()">Translate</button>
+        <div style="display: inline-block">
+          <textarea
+            class="textarea_container textarea"
+            id="translatedText"
+            cols="25"
+            rows="1"
+          ></textarea>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
