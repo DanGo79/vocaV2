@@ -20,7 +20,7 @@ public class UserVocaAssignment {
     @JoinColumn(name = "voca_id")
     Vocabulary vocabulary;
 
-    Integer lernenGelernt = 1;
+    Integer lernenGelernt;
 
     public UserVocaAssignment() {
     }

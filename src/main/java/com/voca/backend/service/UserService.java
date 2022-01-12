@@ -20,16 +20,16 @@ public class UserService {
         this.userRepo = userRepo;
     }
 
-    public String userRegistration(User user) {
+    public User userRegistration(User user) {
         if (userRepo.findByEmail(user.getEmail()).isPresent()) {
             throw new IllegalStateException("Die Email ist bereits vergeben");
         } else {
             userRepo.save(user);
-            return "Benutzer wurde erfolgreich gespeichert.";
+            return user;
         }
     }
 
-    public String registration(UserRequest userRequest) {
+    public User registration(UserRequest userRequest) {
         return userRegistration(new User(
                 userRequest.getUsername(),
                 userRequest.getEmail(),

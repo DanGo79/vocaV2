@@ -15,7 +15,7 @@ import java.util.Optional;
 @Repository
 public interface UserVocaAssignmentRepo extends JpaRepository<UserVocaAssignment, Integer> {
 
-    Optional<UserVocaAssignment> findDistinctByUserAndVocabulary(Integer userId, Integer vocaId);
+    Optional<UserVocaAssignment> findDistinctByUserAndVocabularyAndAndLernenGelernt(User user, Vocabulary vocabulary, Integer lernenGelernt);
 
 
     //    @Query("SELECT a FROM UserVocaAssignment a where a.userId = ?1 and a.lernenGelernt = ?2 ")

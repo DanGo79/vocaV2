@@ -19,7 +19,7 @@ public class UserController {
     }
 
     @PostMapping(path = "/userRegistration")
-    public String userRegistration(@RequestBody UserRequest userRequest) {
+    public User userRegistration(@RequestBody UserRequest userRequest) {
         return userService.registration(userRequest);
     }
 
