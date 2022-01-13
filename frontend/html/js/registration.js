@@ -31,7 +31,7 @@ function createUserHtml(json) {
 }
 
 async function createUser() {
-    const url = 'http://localhost:8080/User/userRegistration';
+    const url = 'http://localhost:8080/User/';
     const data = {
         username: document.getElementById("username").value,
         email: document.getElementById("email").value,
