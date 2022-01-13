@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(path = "/User")
+@RequestMapping(path = "/User/")
 public class UserController {
 
     @Autowired
@@ -18,22 +18,22 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping(path = "/")
+    @PostMapping
     public User userRegistration(@RequestBody UserRequest userRequest) {
         return userService.registration(userRequest);
     }
 
-    @GetMapping(path = "/")
+    @GetMapping
     public User getUser(@RequestBody UserRequest userRequest) {
         return userService.getUser(userRequest);
     }
 
-    @DeleteMapping(path = "/")
+    @DeleteMapping
     public String deleteUser(@RequestBody UserRequest userRequest) {
         return userService.deleteUser(userRequest);
     }
 
-    @PutMapping(path = "/")
+    @PutMapping
     public User putUser(@RequestBody UserRequest userRequest) {
         return userService.putUser(userRequest);
     }

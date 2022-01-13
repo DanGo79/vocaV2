@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/Vocabulary")
+@RequestMapping(path = "/Vocabulary/")
 public class VocabularyController {
 
     @Autowired
@@ -20,7 +20,7 @@ public class VocabularyController {
         this.vocabularyService = vocabularyService;
     }
 
-    @GetMapping(path = "/getVocabularyList")
+    @GetMapping
     public List vocabularyList() {
         return vocabularyService.getVocabularyList();
     }
