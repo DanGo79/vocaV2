@@ -28,19 +28,19 @@ public class UserVocaAssignmentService {
         this.vocabularyRepo = vocabularyRepo;
     }
 
-    public String createAssignment(UserVocaAssignmentRequest userVocabularyAssignmentRequest){
+    public String createAssignment(UserVocaAssignmentRequest userVocabularyAssignmentRequest) {
 
-       Optional<User> user = userRepo.findById(userVocabularyAssignmentRequest.getUserId());
-       User userGet = user.get();
-       Optional<Vocabulary> vocabulary = vocabularyRepo.findById(userVocabularyAssignmentRequest.getVocaId());
-       Vocabulary vocabularyGet = vocabulary.get();
+        Optional<User> user = userRepo.findById(userVocabularyAssignmentRequest.getUserId());
+        User userGet = user.get();
+        Optional<Vocabulary> vocabulary = vocabularyRepo.findById(userVocabularyAssignmentRequest.getVocaId());
+        Vocabulary vocabularyGet = vocabulary.get();
 
         Optional<UserVocaAssignment> userVocabularyAssignment =
-                userVocabularyAssignmentRepo.findDistinctByUserAndVocabularyAndLernenGelernt(userGet, vocabularyGet, userVocabularyAssignmentRequest.getLernenGelernt());
+                userVocabularyAssignmentRepo.findDistinctByUserAndVocabulary(userGet, vocabularyGet);
         if (userVocabularyAssignment.isPresent()) {
-            return "Die Zuordnung mit der lernenGelernt Nummer befindet sich bereits in deiner Liste.";
+            return "Die Zuordnung befindet sich bereits in deiner Liste.";
         } else {
-            UserVocaAssignment userVocaAssignment = new UserVocaAssignment(userVocabularyAssignmentRequest.getLernenGelernt());
+            UserVocaAssignment userVocaAssignment = new UserVocaAssignment();
             userVocaAssignment.setUser(userGet);
             userVocaAssignment.setVocabulary(vocabularyGet);
             try {
@@ -53,8 +53,6 @@ public class UserVocaAssignmentService {
         }
     }
 
-
-
     public String changeList(UserVocaAssignmentRequest userVocabularyAssignmentRequest) {
 
         Optional<User> user = userRepo.findById(userVocabularyAssignmentRequest.getUserId());
@@ -63,7 +61,7 @@ public class UserVocaAssignmentService {
         Vocabulary vocabularyGet = vocabulary.get();
 
         Optional<UserVocaAssignment> userVocabularyAssignment =
-                userVocabularyAssignmentRepo.findDistinctByUserAndVocabularyAndLernenGelernt(userGet, vocabularyGet, userVocabularyAssignmentRequest.getLernenGelernt());
+                userVocabularyAssignmentRepo.findDistinctByUserAndVocabulary(userGet, vocabularyGet);
         if (userVocabularyAssignment.isPresent()) {
             UserVocaAssignment userVocaAssignmentGet = userVocabularyAssignment.get();
             userVocaAssignmentGet.setLernenGelernt(userVocabularyAssignmentRequest.getLernenGelernt());
@@ -74,23 +72,21 @@ public class UserVocaAssignmentService {
                 return "Speicher der Zuordnung fehlgeschlagen";
             }
             return "Die Zuordnung wurde geändert.";
+
         } else {
-            return "Die Zuordnung gibt es schon";
-
+            return "Die Zuordnung mit der Nummer gibt es schon";
         }
-
-
     }
 
+
     public String deleteAssignment(UserVocaAssignmentRequest userVocaAssignmentRequest) {
-        userVocabularyAssignmentRepo.deleteById(userVocaAssignmentRequest.getUserId());
+        userVocabularyAssignmentRepo.deleteUserVocaAssignmentByUserIdAndVocaId(userVocaAssignmentRequest.getUserId(), userVocaAssignmentRequest.getVocaId());
+
         return "Die Vokabel wurde aus deiner Liste gelöscht.";
     }
 
     public List getAssignmentList(UserVocaAssignmentRequest userVocaAssignmentRequest, Integer userId) {
         return userVocabularyAssignmentRepo.findAllByUserAndLernenGelernt(userId, userVocaAssignmentRequest.getLernenGelernt());
-
-
 
 
     }

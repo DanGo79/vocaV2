@@ -20,7 +20,8 @@ public class UserVocaAssignment {
     @JoinColumn(name = "voca_id")
     Vocabulary vocabulary;
 
-    Integer lernenGelernt;
+    Integer lernenGelernt = 1;
+    Integer lernFortschritt = 5;
 
     public UserVocaAssignment() {
     }
@@ -59,5 +60,13 @@ public class UserVocaAssignment {
 
     public void setLernenGelernt(Integer lernenGelernt) {
         this.lernenGelernt = lernenGelernt;
+    }
+
+    public Integer getLernFortschritt() {
+        return lernFortschritt;
+    }
+
+    public void setLernFortschritt(Integer lernFortschritt) {
+        this.lernFortschritt = lernFortschritt;
     }
 }

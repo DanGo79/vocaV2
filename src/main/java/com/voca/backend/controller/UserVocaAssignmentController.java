@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/Assignment")
+@RequestMapping(path = "/Assignment/")
 public class UserVocaAssignmentController {
 
     @Autowired
@@ -21,18 +21,18 @@ public class UserVocaAssignmentController {
         this.userVocaAssignmentService = userVocaAssignmentService;
     }
 
-    @PostMapping(path = "")
+    @PostMapping
     public String createAssignment(@RequestBody UserVocaAssignmentRequest userVocaAssignmentRequest) {
         return userVocaAssignmentService.createAssignment(userVocaAssignmentRequest);
     }
 
-    @PutMapping(path = "/changeList")
+    @PutMapping
     public String changeList(@RequestBody UserVocaAssignmentRequest userVocaAssignmentRequest) {
         return userVocaAssignmentService.changeList(userVocaAssignmentRequest);
     }
 
-    @DeleteMapping(path = "/deleteAssignment")
-    public String deleteAssignment(UserVocaAssignmentRequest userVocaAssignmentRequest) {
+    @DeleteMapping
+    public String deleteAssignment(@RequestBody UserVocaAssignmentRequest userVocaAssignmentRequest) {
         return userVocaAssignmentService.deleteAssignment(userVocaAssignmentRequest);
     }
 

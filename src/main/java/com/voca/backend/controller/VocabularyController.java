@@ -25,22 +25,22 @@ public class VocabularyController {
         return vocabularyService.getVocabularyList();
     }
 
-    @GetMapping("/searchEnglish")
+    @GetMapping("searchEnglish/")
     public Vocabulary searchEnglish(@RequestBody VocabularyRequest vocabularyRequest){
         return vocabularyService.searchEnglish(vocabularyRequest);
     }
 
-    @PostMapping(path = "/addVocabulary")
+    @PostMapping
     public Vocabulary addVocabulary(@RequestBody VocabularyRequest vocabularyRequest) {
         return vocabularyService.addVocabulary(vocabularyRequest);
     }
 
-    @DeleteMapping(path = "/deleteVocabulary")
+    @DeleteMapping
     public String deleteVocabulay(@RequestBody VocabularyRequest vocabularyRequest) {
         return vocabularyService.deleteVocabulay(vocabularyRequest);
     }
 
-    @PutMapping(path = "/putVocabulary")
+    @PutMapping
     public Vocabulary putVocabulary(@RequestBody VocabularyRequest vocabularyRequest) {
         return vocabularyService.putVocabulary(vocabularyRequest);
     }

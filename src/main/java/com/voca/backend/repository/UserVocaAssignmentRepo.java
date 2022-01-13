@@ -4,7 +4,9 @@ import com.voca.backend.Entity.User;
 import com.voca.backend.Entity.UserVocaAssignment;
 import com.voca.backend.Entity.Vocabulary;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.TypedQuery;
@@ -15,9 +17,15 @@ import java.util.Optional;
 @Repository
 public interface UserVocaAssignmentRepo extends JpaRepository<UserVocaAssignment, Integer> {
 
+    @Modifying
+    @Query("DELETE FROM UserVocaAssignment AS u WHERE u.user.id=:userId AND u.vocabulary.id=:vocaId")
+    void deleteUserVocaAssignmentByUserIdAndVocaId(@Param("userId") Integer userId, @Param("vocaId") Integer vocaId);
+
     Optional<UserVocaAssignment> findDistinctByUserAndVocabularyAndLernenGelernt(User user, Vocabulary vocabulary, Integer lernenGelernt);
 
     Optional<UserVocaAssignment> findDistinctByUserAndVocabulary(User user, Vocabulary vocabulary);
+
+
 
 
     //    @Query("SELECT a FROM UserVocaAssignment a where a.userId = ?1 and a.lernenGelernt = ?2 ")
