@@ -1,20 +1,27 @@
 <template>
   <div>
-    <vocabulary-input />
-    <vocabulary-list />
+    <div>
+      <router-link to="/">Home</router-link>
+      <div v-if="!$store.state.isLoggedIn">
+        <router-link to="/login">Login</router-link>
+        <router-link to="/register">Register</router-link>
+      </div>
+      <div v-else>
+        <router-link to="/translate">Translate</router-link>
+        <router-link to="/translations">Translations</router-link>
+        <router-link to="/myVocabulary">My Vocabulary</router-link>
+        <router-link to="/logout">Logout</router-link>
+      </div>
+      <router-link to="/about">About</router-link>
+    </div>
+    <router-view />
   </div>
 </template>
 
 <script>
-import VocabularyList from "./components/VocabularyList.vue";
-import VocabularyInput from "./components/VocabularyInput.vue";
-
 export default {
   name: "App",
-  components: {
-    VocabularyInput,
-    VocabularyList,
-  },
+  components: {},
 };
 </script>
 
