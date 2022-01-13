@@ -1,3 +1,4 @@
+const { createElement } = require("parse5/lib/tree-adapters/default");
 
 function createVocabularyHtml(json) {
     let container = document.createElement("div");
@@ -10,6 +11,9 @@ function createVocabularyHtml(json) {
         //vom server löschen
         //throw new Exception("hallo");
         await deleteVocabulary()
+        json.id
+
+
 
         //aktuelle id -> json.id
 
@@ -19,12 +23,19 @@ function createVocabularyHtml(json) {
 
     let modifyButton = document.createElement("button");
     modifyButton.innerHTML = "Bearbeiten";
+    modifyButton.onclick = async () => {
+
+    }
 
     container.appendChild(p);
     container.appendChild(deleteButton);
     container.appendChild(modifyButton);
 
     return container;
+}
+
+async function deleteVocabulary(id) {
+
 }
 
 async function createVoca() {
