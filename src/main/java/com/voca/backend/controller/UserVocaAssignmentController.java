@@ -21,9 +21,9 @@ public class UserVocaAssignmentController {
         this.userVocaAssignmentService = userVocaAssignmentService;
     }
 
-    @PostMapping(path = "/createAssignment/{userId}/{vocaId}")
-    public String createAssignment(@RequestBody UserVocaAssignmentRequest userVocaAssignmentRequest, @PathVariable Integer userId,@PathVariable Integer vocaId) {
-        return userVocaAssignmentService.createAssignment(userVocaAssignmentRequest,userId,vocaId);
+    @PostMapping(path = "")
+    public String createAssignment(@RequestBody UserVocaAssignmentRequest userVocaAssignmentRequest) {
+        return userVocaAssignmentService.createAssignment(userVocaAssignmentRequest);
     }
 
     @PutMapping(path = "/changeList")

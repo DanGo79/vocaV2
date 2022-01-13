@@ -82,11 +82,11 @@ body {
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
-  color: var(--bs-body-color);
+  color: #d31212;
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
+  background-color: #6850508c;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: rgb(165 71 71);
 }
 
 hr {
@@ -7493,6 +7493,12 @@ textarea.form-control-lg {
 .py-5 {
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
+}
+
+.py-5_1 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+  background-color: #bfbc91;
 }
 
 .pt-0 {

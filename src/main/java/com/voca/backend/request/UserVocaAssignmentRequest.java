@@ -2,7 +2,8 @@ package com.voca.backend.request;
 
 public class UserVocaAssignmentRequest {
 
-    private Integer id;
+    private Integer userId;
+    private Integer vocaId;
     private Integer lernenGelernt;
 
     public UserVocaAssignmentRequest() {
@@ -12,9 +13,11 @@ public class UserVocaAssignmentRequest {
         return lernenGelernt;
     }
 
-    public Integer getId() {
-        return id;
+    public Integer getUserId() {
+        return userId;
     }
 
-
+    public Integer getVocaId() {
+        return vocaId;
+    }
 }

@@ -1,10 +1,8 @@
 .center {
-  
   text-align: center;
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
 }
 .textarea {
   display: inline-block;

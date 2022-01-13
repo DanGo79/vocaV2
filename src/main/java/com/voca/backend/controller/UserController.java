@@ -18,22 +18,22 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping(path = "/userRegistration")
+    @PostMapping(path = "/")
     public User userRegistration(@RequestBody UserRequest userRequest) {
         return userService.registration(userRequest);
     }
 
-    @GetMapping(path = "/getUser")
+    @GetMapping(path = "/")
     public User getUser(@RequestBody UserRequest userRequest) {
         return userService.getUser(userRequest);
     }
 
-    @DeleteMapping(path = "/deleteUser")
+    @DeleteMapping(path = "/")
     public String deleteUser(@RequestBody UserRequest userRequest) {
         return userService.deleteUser(userRequest);
     }
 
-    @PutMapping(path = "/putUser")
+    @PutMapping(path = "/")
     public User putUser(@RequestBody UserRequest userRequest) {
         return userService.putUser(userRequest);
     }
