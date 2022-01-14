@@ -6,10 +6,11 @@ import com.voca.backend.Entity.Vocabulary;
 import com.voca.backend.repository.UserRepo;
 import com.voca.backend.repository.UserVocaAssignmentRepo;
 import com.voca.backend.repository.VocabularyRepo;
-import com.voca.backend.request.UserRequest;
 import com.voca.backend.request.UserVocaAssignmentRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
 import java.util.Optional;
@@ -28,21 +29,17 @@ public class UserVocaAssignmentService {
         this.vocabularyRepo = vocabularyRepo;
     }
 
-    public String createAssignment(UserVocaAssignmentRequest userVocabularyAssignmentRequest) {
-
-        Optional<User> user = userRepo.findById(userVocabularyAssignmentRequest.getUserId());
-        User userGet = user.get();
-        Optional<Vocabulary> vocabulary = vocabularyRepo.findById(userVocabularyAssignmentRequest.getVocaId());
-        Vocabulary vocabularyGet = vocabulary.get();
-
+    public String createAssignment(UserVocaAssignmentRequest userVocaAssignmentRequest) {
         Optional<UserVocaAssignment> userVocabularyAssignment =
-                userVocabularyAssignmentRepo.findDistinctByUserAndVocabulary(userGet, vocabularyGet);
+                userVocabularyAssignmentRepo.findDistinctByUserAndVocabulary(
+                        findUser(userVocaAssignmentRequest),
+                        findVoca(userVocaAssignmentRequest));
         if (userVocabularyAssignment.isPresent()) {
             return "Die Zuordnung befindet sich bereits in deiner Liste.";
         } else {
             UserVocaAssignment userVocaAssignment = new UserVocaAssignment();
-            userVocaAssignment.setUser(userGet);
-            userVocaAssignment.setVocabulary(vocabularyGet);
+            userVocaAssignment.setUser(findUser(userVocaAssignmentRequest));
+            userVocaAssignment.setVocabulary(findVoca(userVocaAssignmentRequest));
             try {
                 userVocabularyAssignmentRepo.save(userVocaAssignment);
             } catch (Exception exc) {
@@ -53,18 +50,14 @@ public class UserVocaAssignmentService {
         }
     }
 
-    public String changeList(UserVocaAssignmentRequest userVocabularyAssignmentRequest) {
-
-        Optional<User> user = userRepo.findById(userVocabularyAssignmentRequest.getUserId());
-        User userGet = user.get();
-        Optional<Vocabulary> vocabulary = vocabularyRepo.findById(userVocabularyAssignmentRequest.getVocaId());
-        Vocabulary vocabularyGet = vocabulary.get();
-
+    public String changeList(UserVocaAssignmentRequest userVocaAssignmentRequest) {
         Optional<UserVocaAssignment> userVocabularyAssignment =
-                userVocabularyAssignmentRepo.findDistinctByUserAndVocabulary(userGet, vocabularyGet);
+                userVocabularyAssignmentRepo.findDistinctByUserAndVocabulary(
+                        findUser(userVocaAssignmentRequest),
+                        findVoca(userVocaAssignmentRequest));
         if (userVocabularyAssignment.isPresent()) {
             UserVocaAssignment userVocaAssignmentGet = userVocabularyAssignment.get();
-            userVocaAssignmentGet.setLernenGelernt(userVocabularyAssignmentRequest.getLernenGelernt());
+            userVocaAssignmentGet.setLernenGelernt(userVocaAssignmentRequest.getLernenGelernt());
             try {
                 userVocabularyAssignmentRepo.save(userVocaAssignmentGet);
             } catch (Exception exc) {
@@ -72,23 +65,51 @@ public class UserVocaAssignmentService {
                 return "Speicher der Zuordnung fehlgeschlagen";
             }
             return "Die Zuordnung wurde geändert.";
-
         } else {
-            return "Die Zuordnung mit der Nummer gibt es schon";
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Assignment not found");
         }
     }
 
-
     public String deleteAssignment(UserVocaAssignmentRequest userVocaAssignmentRequest) {
-        userVocabularyAssignmentRepo.deleteUserVocaAssignmentByUserIdAndVocaId(userVocaAssignmentRequest.getUserId(), userVocaAssignmentRequest.getVocaId());
-
-        return "Die Vokabel wurde aus deiner Liste gelöscht.";
+        Optional<UserVocaAssignment> userVocabularyAssignment =
+                userVocabularyAssignmentRepo.findDistinctByUserAndVocabulary(
+                        findUser(userVocaAssignmentRequest),
+                        findVoca(userVocaAssignmentRequest));
+        if (userVocabularyAssignment.isPresent()) {
+            try {
+                userVocabularyAssignmentRepo.delete(userVocabularyAssignment.get());
+            } catch (Exception exc) {
+                System.out.println("Löschen der Zuordnung fehlgeschlagen");
+                return "Löschen der Zuordnung fehlgeschlagen";
+            }
+            return "Die Zuordnung wurde gelöscht.";
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Assignment not found");
+        }
     }
 
-    public List getAssignmentList(UserVocaAssignmentRequest userVocaAssignmentRequest, Integer userId) {
-        return userVocabularyAssignmentRepo.findAllByUserAndLernenGelernt(userId, userVocaAssignmentRequest.getLernenGelernt());
+    public List getAssignmentList(UserVocaAssignmentRequest userVocaAssignmentRequest) {
+        return userVocabularyAssignmentRepo.findAllByUserAndLernenGelernt(
+                findUser(userVocaAssignmentRequest)
+                , userVocaAssignmentRequest.getLernenGelernt());
+    }
 
+    public User findUser(UserVocaAssignmentRequest userVocaAssignmentRequest) {
+        Optional<User> user = userRepo.findById(userVocaAssignmentRequest.getUserId());
+        if (user.isPresent()) {
+            return user.get();
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "User not found");
+        }
+    }
 
+    public Vocabulary findVoca(UserVocaAssignmentRequest userVocaAssignmentRequest) {
+        Optional<Vocabulary> vocabulary = vocabularyRepo.findById(userVocaAssignmentRequest.getVocaId());
+        if (vocabulary.isPresent()) {
+            return vocabulary.get();
+        } else {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Vocabulary not found");
+        }
     }
 
 

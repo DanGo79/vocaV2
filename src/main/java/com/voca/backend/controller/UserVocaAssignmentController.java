@@ -36,9 +36,9 @@ public class UserVocaAssignmentController {
         return userVocaAssignmentService.deleteAssignment(userVocaAssignmentRequest);
     }
 
-    @GetMapping(path = "/getAssignmentList/{userId}")
-    public List getAssignmentList(@RequestBody UserVocaAssignmentRequest userVocaAssignmentRequest, @PathVariable Integer userId) {
-        return userVocaAssignmentService.getAssignmentList(userVocaAssignmentRequest,userId);
+    @GetMapping
+    public List getAssignmentList(@RequestBody UserVocaAssignmentRequest userVocaAssignmentRequest) {
+        return userVocaAssignmentService.getAssignmentList(userVocaAssignmentRequest);
     }
 
 

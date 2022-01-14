@@ -4,32 +4,26 @@ import com.voca.backend.Entity.User;
 import com.voca.backend.Entity.UserVocaAssignment;
 import com.voca.backend.Entity.Vocabulary;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import javax.persistence.TypedQuery;
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
 @Repository
 public interface UserVocaAssignmentRepo extends JpaRepository<UserVocaAssignment, Integer> {
 
-    @Modifying
-    @Query("DELETE FROM UserVocaAssignment AS u WHERE u.user.id=:userId AND u.vocabulary.id=:vocaId")
-    void deleteUserVocaAssignmentByUserIdAndVocaId(@Param("userId") Integer userId, @Param("vocaId") Integer vocaId);
+//    @Modifying
+//    @Query("DELETE FROM UserVocaAssignment AS u WHERE u.user.id=:userId AND u.id.vocaId=:vocaId")
+//    void deV(@Param("userId") Integer userId, @Param("vocaId") Integer vocaId);
+
 
     Optional<UserVocaAssignment> findDistinctByUserAndVocabularyAndLernenGelernt(User user, Vocabulary vocabulary, Integer lernenGelernt);
 
     Optional<UserVocaAssignment> findDistinctByUserAndVocabulary(User user, Vocabulary vocabulary);
 
-
-
-
-    //    @Query("SELECT a FROM UserVocaAssignment a where a.userId = ?1 and a.lernenGelernt = ?2 ")
-    List<UserVocaAssignment> findAllByUserAndLernenGelernt(Integer userId, Integer lernenGelernt);
+    @Query("SELECT a.vocabulary FROM UserVocaAssignment a where a.user = ?1 and a.lernenGelernt = ?2 ")
+    List<Vocabulary> findAllByUserAndLernenGelernt(User user, Integer lernenGelernt);
 
 //    @Query(value = "SELECT b.nameEnglish, b.nameGerman FROM UserVocaAssignment a inner join Vocabulary b on a.vocaId = b.vocaId where a.userId = ?1 and a.lernenGelernt = ?2 ")
 //    List<Object> findAllByUserIdAndLernenGelernt(Integer userId, boolean lernenGelernt);
