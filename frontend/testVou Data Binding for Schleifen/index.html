@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Vou 2</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p v-for="name in names">{{ name }}</p>
+        <p>-------------</p>
+        <template v-for="person in persons">
+            <div v-for="(value, key) in person">
+                <p>{{ value }}</p>
+                <p>{{ key }}</p>
+            </div>
+        </template>
+        <p>-------------</p>
+        <template v-for="person in persons">
+            <p>{{ person.name }}</p>
+            <p>{{ person.age }}</p>
+        </template>
+        <p>-------------</p>
+        <p v-for="(person, index) in persons">{{ index }} - {{ person.name }} - {{ person.age }}</p>
+        <p>-------------</p>
+        <p>{{ names[1] }}</p>
+        <p>{{ names[0] }}</p>
+    </div>
+
+<script src="app.js"></script>
+</body>
+</html>
