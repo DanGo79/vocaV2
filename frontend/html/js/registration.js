@@ -61,3 +61,20 @@ async function createUser() {
     }
 
 }
+async function dleteUser(userId) {
+    const url = 'http://localhost:8080/User/';
+
+    const data = {
+        id: userId
+    };
+
+
+    const options = {
+        method: 'Delete',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+
+    }
+}

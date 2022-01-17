@@ -10,8 +10,8 @@ function createVocabularyHtml(json) {
     deleteButton.onclick = async () => {
         //vom server löschen
         //throw new Exception("hallo");
-        await deleteVocabulary()
-        json.id
+        await deleteVocabulary(json.id)
+
 
 
 
@@ -34,8 +34,34 @@ function createVocabularyHtml(json) {
     return container;
 }
 
-async function deleteVocabulary(id) {
+async function deleteVocabulary(vocaId) {
+    const url = 'http://localhost:8080/Vocabulary/deleteVocabulary';
 
+    const data = {
+        id: vocaId
+    };
+
+    const options = {
+        method: 'DELETE',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+
+    }
+
+    try {
+        const response = await fetch(url, options);
+        if (response.ok) {
+            const json = await response.json();
+            console.log(json);
+            var text = JSON.stringify(json)
+        } else {
+            //Ungültiger Statuscode - Fehler ausgeben
+        }
+    } catch (err) {
+        //Netzwerkfehler oder fehler beim parsen von json - Fehler ausgeben
+    }
 }
 
 async function createVoca() {
