@@ -25,7 +25,7 @@ public class VocabularyController {
         return vocabularyService.getVocabularyList();
     }
 
-    @GetMapping("searchEnglish/")
+    @PostMapping("searchEnglish/")
     public Vocabulary searchEnglish(@RequestBody VocabularyRequest vocabularyRequest){
         return vocabularyService.searchEnglish(vocabularyRequest);
     }

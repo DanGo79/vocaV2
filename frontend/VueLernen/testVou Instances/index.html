@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Vou 2</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="vue-one-app">
+        <input type="text" placeholder="firstname..." v-model="firstname">
+        <input type="text" placeholder="lastname..." v-model="lastname">
+        <p>{{ fullname }}</p>
+        
+    </div>
+
+    <div id="vue-two-app">
+        <p>{{ helloStr }}</p>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

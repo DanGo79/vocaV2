@@ -48,7 +48,15 @@ public class VocabularyService {
     }
 
     public Vocabulary searchEnglish(VocabularyRequest vocabularyRequest) {
-        return searchEnglishVocabulary(vocabularyRequest.getNameEnglish());
+
+        if(vocabularyRequest.getNameEnglish().isEmpty()) {
+            Vocabulary vocabulary = new Vocabulary();
+            vocabulary.setNameGerman("Bitte englisches Wort eingeben");
+            return vocabulary;
+        }
+        String nameEnglish = vocabularyRequest.getNameEnglish();
+        return searchEnglishVocabulary(nameEnglish.toLowerCase());
+
     }
 
     public String translateWord(String nameEnglish) {
