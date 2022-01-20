@@ -1,49 +1,90 @@
 <template>
-  <section class="py-5">
-    <div>
+  <section class="sectionInput">
+    <b-card class="inputCard">
       <p>Fehler: {{ $store.state.error }}</p>
 
-      <div style="margin: 25px">
-        <p>English</p>
-        <input
-          id="englishVoca"
-          type="text"
-          placeholder="Wort in Englisch eingeben"
-          v-model="englishVoca"
-          style="width: 200px"
-        />
+      <div class="divBox">
+        <b-input-group class="inputGroup">
+          <b-input-group-prepend>
+            <Textfield text="Englisch" />
+          </b-input-group-prepend>
+          <Inputfield
+            id="englishVoca"
+            placeholder="Wort in Englisch eingeben"
+            v-model="englishVoca"
+            :clickedListener="searchVocabulary"
+          />
+        </b-input-group>
+        <!--
+        <b-input-group class="inputGroup">-->
       </div>
-      <div style="margin: 25px">
-        <p>Deutsch</p>
-        <input
-          id="germanVoca"
-          type="text"
-          placeholder="Deutsche Übersetzung"
-          v-model="$store.state.currentVocabulary.nameGerman"
-          style="width: 200px"
-        />
+
+      <div class="divBox">
+        <b-input-group-append>
+          <b-button
+            class="inputButton"
+            variant="outline-primary"
+            id="createVoca"
+            @click="searchVocabulary"
+            >Übersetzen</b-button
+          >
+        </b-input-group-append>
       </div>
-      <button style="margin-left: 25px" id="createVoca" @click="buttonClicked">
-        Übersetzen
-      </button>
-      <button style="margin-left: 25px" @click="seleteClicked">
-        Felder löschen
-      </button>
-    </div>
+
+      <div class="divBox">
+        <b-input-group class="inputGroup">
+          <b-input-group-text>Deutsch</b-input-group-text>
+          <Inputfield
+            id="germanVoca"
+            placeholder="Deutsche Übersetzung"
+            v-model="germanVoca"
+            :clickedListener="searchVocabulary"
+          />
+        </b-input-group>
+      </div>
+
+      <div class="divBox">
+        <b-input-group-append>
+          <b-button
+            class="inputButton"
+            variant="outline-primary"
+            @click="seleteClicked"
+          >
+            Felder löschen
+          </b-button>
+          <b-button
+            class="inputButton"
+            variant="outline-primary"
+            id="createVoca"
+            @click="searchVocabulary"
+            >Vokabel speichern</b-button
+          >
+        </b-input-group-append>
+      </div>
+    </b-card>
   </section>
 </template>
 
 <script>
-import { ref } from "vue";
+import { ref, watchEffect } from "vue";
 import { useStore } from "vuex";
+import Inputfield from "./Inputfield.vue";
+import Textfield from "./Textfield.vue";
 
 export default {
+  components: { Inputfield, Textfield },
+
   name: "VocabularyInput",
   props: {},
   setup() {
     const store = useStore();
     let germanVoca = ref("");
     let englishVoca = ref("");
+
+    watchEffect(() => {
+      console.log("Hallo");
+      germanVoca.value = store.state.currentVocabulary.nameGerman;
+    });
 
     function searchVocabulary() {
       store.dispatch("addVocabularyAction", {
@@ -62,7 +103,7 @@ export default {
     }
 
     return {
-      buttonClicked: searchVocabulary,
+      searchVocabulary,
       germanVoca,
       englishVoca,
       seleteClicked,
@@ -73,4 +114,32 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.inputGroup {
+  width: max(25vw, 330px);
+}
+
+.inputButton {
+  width: 160px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.inputCard {
+  background-color: rgb(195, 195, 202);
+  align-items: center;
+  height: auto;
+  width: max(50vw, 600px);
+}
+
+.sectionInput {
+  background-color: rgb(212, 212, 218);
+  display: flex;
+  justify-content: center;
+}
+
+.divBox {
+  display: flex;
+  justify-content: center;
+  margin: 35px;
+}
 </style>
