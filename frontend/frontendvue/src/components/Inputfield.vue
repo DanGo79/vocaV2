@@ -1,20 +1,17 @@
-<template lang="EN">
-          <input
-           :id="id"
-            
-            class="form-control"
-            :placeholder="placeholder"
-            :value="modelValue"
+<template>
+  <input
+    type="text"
+    class="form-control"
+    :placeholder="placeholder"
+    :value="modelValue"
     @input="$emit('update:modelValue', $event.target.value)"
-            @keyup.enter="clickedListener"
-          >
+    @keyup.enter="clickedListener"
+  />
 </template>
 
 <script>
 export default {
   props: {
-    id: String,
-    type: Text,
     placeholder: {
       type: String,
       default: "",
@@ -28,5 +25,5 @@ export default {
   },
 };
 </script>
-<style lang="EN">
+<style>
 </style>

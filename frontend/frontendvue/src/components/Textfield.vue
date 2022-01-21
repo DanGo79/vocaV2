@@ -1,23 +1,14 @@
-<template lang="EN">
-   <div
-   class="input-group-text"
-   
-
-   >
-   :text="text"
-   
-   </div>
-
-
-
+<template >
+  <div class="input-group-text" type="text">{{ title }}</div>
 </template>
 <script>
 export default {
-  Type: Text,
+  inheritAttrs: false,
+
   props: {
-    text: String,
+    title: String,
   },
 };
 </script>
-<style lang="EN">
+<style >
 </style>

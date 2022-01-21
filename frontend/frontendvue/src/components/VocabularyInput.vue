@@ -5,11 +5,9 @@
 
       <div class="divBox">
         <b-input-group class="inputGroup">
-          <b-input-group-prepend>
-            <Textfield text="Englisch" />
-          </b-input-group-prepend>
-          <Inputfield
-            id="englishVoca"
+          <text-field title="Englisch" />
+
+          <input-field
             placeholder="Wort in Englisch eingeben"
             v-model="englishVoca"
             :clickedListener="searchVocabulary"
@@ -21,21 +19,14 @@
 
       <div class="divBox">
         <b-input-group-append>
-          <b-button
-            class="inputButton"
-            variant="outline-primary"
-            id="createVoca"
-            @click="searchVocabulary"
-            >Übersetzen</b-button
-          >
+          <Button title="Übersetzen" :clickedListener="searchVocabulary" />
         </b-input-group-append>
       </div>
 
       <div class="divBox">
         <b-input-group class="inputGroup">
-          <b-input-group-text>Deutsch</b-input-group-text>
-          <Inputfield
-            id="germanVoca"
+          <text-field title="Deutsch" />
+          <input-field
             placeholder="Deutsche Übersetzung"
             v-model="germanVoca"
             :clickedListener="searchVocabulary"
@@ -45,20 +36,8 @@
 
       <div class="divBox">
         <b-input-group-append>
-          <b-button
-            class="inputButton"
-            variant="outline-primary"
-            @click="seleteClicked"
-          >
-            Felder löschen
-          </b-button>
-          <b-button
-            class="inputButton"
-            variant="outline-primary"
-            id="createVoca"
-            @click="searchVocabulary"
-            >Vokabel speichern</b-button
-          >
+          <Button title="Felder löschen" :clickedListener="deleteClicked" />
+          <Button title="Vokabel speichern" :clickedListener="deleteClicked" />
         </b-input-group-append>
       </div>
     </b-card>
@@ -68,11 +47,12 @@
 <script>
 import { ref, watchEffect } from "vue";
 import { useStore } from "vuex";
-import Inputfield from "./Inputfield.vue";
-import Textfield from "./Textfield.vue";
+import Button from "./Button.vue";
+import InputField from "./InputField";
+import TextField from "./TextField";
 
 export default {
-  components: { Inputfield, Textfield },
+  components: { InputField, TextField, Button },
 
   name: "VocabularyInput",
   props: {},
@@ -96,7 +76,7 @@ export default {
       //saveVocabulary(germanVoca.value, englishVoca.value);
     }
 
-    function seleteClicked() {
+    function deleteClicked() {
       germanVoca.value = "";
       englishVoca.value = "";
       console.log("Delete was Clicked");
@@ -106,7 +86,7 @@ export default {
       searchVocabulary,
       germanVoca,
       englishVoca,
-      seleteClicked,
+      deleteClicked,
     };
   },
 };
