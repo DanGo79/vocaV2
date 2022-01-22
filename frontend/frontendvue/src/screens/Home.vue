@@ -1,10 +1,14 @@
 <template>
-  <div>Home</div>
+  <div>
+    <VocabularyInput />
+  </div>
 </template>
 
 <script>
+import VocabularyInput from "../components/VocabularyInput.vue";
 export default {
   name: "Home",
+  components: { VocabularyInput },
 };
 </script>
 

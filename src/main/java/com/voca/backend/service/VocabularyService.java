@@ -50,9 +50,7 @@ public class VocabularyService {
     public Vocabulary searchEnglish(VocabularyRequest vocabularyRequest) {
 
         if(vocabularyRequest.getNameEnglish().isEmpty()) {
-            Vocabulary vocabulary = new Vocabulary();
-            vocabulary.setNameGerman("Bitte englisches Wort eingeben");
-            return vocabulary;
+            throw new IllegalStateException("Die Eingabe von Deutsch->Englisch ist noch nicht möglich. Wir arbeiten daran. Bitte englisches Wort eingeben");
         }
         String nameEnglish = vocabularyRequest.getNameEnglish();
         return searchEnglishVocabulary(nameEnglish.toLowerCase());

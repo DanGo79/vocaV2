@@ -1,10 +1,14 @@
 <template>
-  <div>Register</div>
+  <div>
+    <RegisterField />
+  </div>
 </template>
 
 <script>
+import RegisterField from "../components/RegisterField.vue";
 export default {
   name: "Register",
+  components: { RegisterField },
 };
 </script>
 

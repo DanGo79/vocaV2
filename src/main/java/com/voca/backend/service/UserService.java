@@ -1,13 +1,12 @@
 package com.voca.backend.service;
 
 import com.voca.backend.Entity.User;
-import com.voca.backend.Entity.Vocabulary;
 import com.voca.backend.repository.UserRepo;
 import com.voca.backend.request.UserRequest;
-import com.voca.backend.request.VocabularyRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -22,7 +21,11 @@ public class UserService {
 
     public User userRegistration(User user) {
         if (userRepo.findByEmail(user.getEmail()).isPresent()) {
-            throw new IllegalStateException("Die Email ist bereits vergeben");
+            throw new IllegalStateException("Die Email ist bereits vergeben!");
+
+        } else if (userRepo.findByUsername(user.getUsername()).isPresent()) {
+            throw new IllegalStateException("Der Username ist bereits vergeben!");
+
         } else {
             userRepo.save(user);
             return user;
@@ -38,13 +41,26 @@ public class UserService {
     }
 
     public User getUser(UserRequest userRequest) {
-        if (userRequest.getUsername() != null) {
-            return userRepo.findByUsername(userRequest.getUsername()).get();
+
+        Optional<User> foundByUsername = userRepo.findByUsername(userRequest.getUsername());
+        if (foundByUsername.isPresent()) {
+            if (Objects.equals(foundByUsername.get().getPassword(), userRequest.getPassword())) {
+                return foundByUsername.get();
+            } else {
+                throw new IllegalStateException("Das Passwort ist falsch!");
+            }
         }
-        if (userRequest.getEmail() != null) {
-            return userRepo.findByEmail(userRequest.getEmail()).get();
+
+        Optional<User> foundByEmail = userRepo.findByEmail(userRequest.getUsername());
+        if (foundByEmail.isPresent()) {
+            if (Objects.equals(foundByEmail.get().getPassword(), userRequest.getPassword())) {
+                return foundByEmail.get();
+            } else {
+                throw new IllegalStateException("Das Passwort ist falsch!");
+            }
         }
-        return null;
+        throw new IllegalStateException("Benutzer oder Email gibt es nicht!");
+
     }
 
     public String deleteUser(UserRequest userRequest) {

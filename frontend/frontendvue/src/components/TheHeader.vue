@@ -2,8 +2,7 @@
   <header class="header">
     <div class="navbarHeader">
       <div>
-        <Link to="/" title="Home" />
-        <Link to="/about" title="About" />
+        <Link to="/translate" title="Home" />
       </div>
       <div>
         <div v-if="!$store.state.isLoggedIn">
@@ -17,6 +16,7 @@
           <Link to="/logout" title="Logout" />
         </div>
       </div>
+      <Link to="/about" title="About" />
     </div>
   </header>
 </template>

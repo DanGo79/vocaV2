@@ -1,28 +1,17 @@
 <template>
   <div>
-    <div>Login</div>
-    <button @click="login">Login</button>
+    <LoginField />
   </div>
 </template>
 
 <script>
-import { useStore } from "vuex";
+import LoginField from "../components/LoginField.vue";
 export default {
   name: "Login",
   setup() {
-    const store = useStore();
-    function buttonClicked() {
-      store.dispatch("login", {
-        username: "",
-        password: "",
-      });
-      console.log("Button was clicked");
-      //saveVocabulary(germanVoca.value, englishVoca.value);
-    }
-    return {
-      login: buttonClicked,
-    };
+    return {};
   },
+  components: { LoginField },
 };
 </script>
 
