@@ -4,10 +4,10 @@ export default createStore({
   state() {
     return {
       myVocabulary: [],
-      isLogged: false,
+      isLogged: localStorage.getItem("isLogged"),
       message: "",
       currentVocabulary: { nameGerman: "" },
-      currentUser: null,
+      currentUser: localStorage.getItem("addUser"),
     };
   },
   mutations: {
@@ -16,6 +16,7 @@ export default createStore({
     },
     setLoggedIn(state) {
       state.isLoggedIn = true;
+      console.log(state);
     },
     setLoggedOut(state) {
       state.isLoggedIn = false;
@@ -54,10 +55,12 @@ export default createStore({
         );
         if (response.ok) {
           const dataResponse = await response.json();
-          console.log(dataResponse);
+
           commit("addUser", dataResponse);
           commit("setMessage", "Benutzer ist eingeloggt.");
-          commit("setLoggedIn");
+          commit("setLoggedIn", true);
+          localStorage.setItem("isLogged", true);
+          localStorage.setItem("addUser", JSON.stringify(dataResponse));
         } else {
           const dataResponse = await response.json();
           console.log(dataResponse);

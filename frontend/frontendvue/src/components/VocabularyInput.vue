@@ -39,7 +39,18 @@
           <Button title="Felder löschen" :clickedListener="deleteClicked" />
         </div>
         <div style="margin: 10px">
-          <Button title="Vokabel speichern" :clickedListener="addVocabulary" />
+          <Button
+            v-if="$store.state.isLogged"
+            title="Vokabel speichern"
+            :clickedListener="addVocabulary"
+          />
+        </div>
+        <div style="margin: 10px">
+          <Button
+            v-if="!$store.state.isLogged"
+            to="/login"
+            title="Vokabel speichern"
+          />
         </div>
       </div>
 
@@ -68,7 +79,8 @@ export default {
     let germanVoca = ref("");
     let englishVoca = ref("");
     store.commit("setMessage", "");
-
+    console.log(store.state.currentUser);
+    console.log(store.state.isLogged);
     watchEffect(() => {
       console.log("Hallo");
       germanVoca.value = store.state.currentVocabulary.nameGerman;
