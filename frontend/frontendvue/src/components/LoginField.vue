@@ -48,7 +48,7 @@ export default {
     const store = useStore();
     let usernameEmail = ref("");
     let password1 = ref("");
-    store.commit("setMessage", "");
+    //store.commit("setMessage", "");
 
     watchEffect(() => {
       // messages.value = store.state.currentUser;

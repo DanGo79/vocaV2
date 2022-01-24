@@ -1,4 +1,5 @@
 import { createStore } from "vuex";
+import router from "@/router";
 
 export default createStore({
   state() {
@@ -15,17 +16,21 @@ export default createStore({
       state.message = message;
     },
     setLoggedIn(state) {
-      state.isLoggedIn = true;
+      localStorage.setItem("isLogged", true);
+      state.isLogged = true;
       console.log(state);
     },
     setLoggedOut(state) {
-      state.isLoggedIn = false;
+      state.isLogged = false;
+      localStorage.setItem("isLogged", false);
+      localStorage.removeItem("addUser");
     },
     addVocabulary(state, vocabulary) {
       state.currentVocabulary = vocabulary;
     },
     addUser(state, user) {
       state.currentUser = user;
+      localStorage.setItem("addUser", JSON.stringify(user));
     },
 
     // removeVocabulary(state, id) {
@@ -55,12 +60,12 @@ export default createStore({
         );
         if (response.ok) {
           const dataResponse = await response.json();
-
           commit("addUser", dataResponse);
           commit("setMessage", "Benutzer ist eingeloggt.");
-          commit("setLoggedIn", true);
-          localStorage.setItem("isLogged", true);
-          localStorage.setItem("addUser", JSON.stringify(dataResponse));
+          commit("setLoggedIn");
+
+          //window.location.href = "/";
+          router.push("/");
         } else {
           const dataResponse = await response.json();
           console.log(dataResponse);

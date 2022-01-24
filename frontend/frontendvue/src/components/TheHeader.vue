@@ -13,7 +13,7 @@
           <Link to="/translate" title="Translate" />
           <Link to="/translations" title="Translations" />
           <Link to="/myVocabulary" title="My Vocabulary" />
-          <Link to="/logout" title="Logout" />
+          <Link title="Logout" :clickedListener="logout" />
         </div>
       </div>
       <Link to="/about" title="About" />
@@ -21,11 +21,22 @@
   </header>
 </template>
 <script>
+import store from "../store/store";
 import Link from "./Link.vue";
 
 export default {
   name: "TheHeader",
   components: { Link },
+
+  setup() {
+    function logout() {
+      console.log("CALLED_");
+      store.commit("setLoggedOut");
+    }
+    return {
+      logout,
+    };
+  },
 };
 </script>
 <style>

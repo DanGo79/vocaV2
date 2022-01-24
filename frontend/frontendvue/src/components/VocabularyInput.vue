@@ -38,19 +38,21 @@
         <div style="margin: 10px">
           <Button title="Felder löschen" :clickedListener="deleteClicked" />
         </div>
-        <div style="margin: 10px">
-          <Button
-            v-if="$store.state.isLogged"
-            title="Vokabel speichern"
-            :clickedListener="addVocabulary"
-          />
-        </div>
-        <div style="margin: 10px">
-          <Button
-            v-if="!$store.state.isLogged"
-            to="/login"
-            title="Vokabel speichern"
-          />
+        <div>
+          <div style="margin: 10px">
+            <Button
+              v-if="$store.state.isLogged"
+              title="Vokabel speichern"
+              :clickedListener="addVocabulary"
+            />
+          </div>
+          <div style="margin: 10px">
+            <Button
+              v-if="!$store.state.isLogged"
+              title="Vokabel speichern"
+              :clickedListener="linkToLogin"
+            />
+          </div>
         </div>
       </div>
 
@@ -68,6 +70,7 @@ import Button from "./Button.vue";
 import InputField from "./InputField";
 import TextField from "./TextField";
 import MessageText from "./MessageText.vue";
+import router from "@/router";
 
 export default {
   components: { InputField, TextField, Button, MessageText },
@@ -81,9 +84,11 @@ export default {
     store.commit("setMessage", "");
     console.log(store.state.currentUser);
     console.log(store.state.isLogged);
+
     watchEffect(() => {
       console.log("Hallo");
       germanVoca.value = store.state.currentVocabulary.nameGerman;
+      englishVoca.value = store.state.currentVocabulary.nameEnglish;
     });
 
     function searchVocabulary() {
@@ -95,21 +100,30 @@ export default {
       //saveVocabulary(germanVoca.value, englishVoca.value);
     }
 
+    function deleteClicked() {
+      germanVoca.value = "";
+      englishVoca.value = "";
+      console.log("Delete was Clicked");
+    }
+
+    function linkToLogin() {
+      store.commit(
+        "setMessage",
+        "Um Vokabeln speichern zu können bitte eingeloggen!"
+      );
+      router.push("/login");
+    }
+
     function addVocabulary() {
-      if (store.state.isLogged == false) {
-        <Button to="/register" title="Register" />;
-        store.commit("setMessage", "Du bist nicht eingeloggt!");
-      } else {
-        germanVoca.value = "";
-        englishVoca.value = "";
-        console.log("Delete was Clicked");
-      }
+      store.commit("setMessage", "Vokabel gespeichert!");
     }
 
     return {
       searchVocabulary,
       germanVoca,
       englishVoca,
+      deleteClicked,
+      linkToLogin,
       addVocabulary,
     };
   },
