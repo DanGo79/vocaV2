@@ -110,6 +110,7 @@ export default createStore({
         console.log(err);
       }
     },
+
     async deleteVocabularyAction({ commit }, id) {
       //so tun als ob wir speichern
       console.log(id);
@@ -138,6 +139,7 @@ export default createStore({
           commit("addUser", dataResponse);
           commit("setMessage", "Benutzer wurde erfolgreich angelegt.");
           commit("setLoggedIn");
+          router.push("/");
         } else {
           const dataResponse = await response.json();
           console.log(dataResponse);
@@ -145,7 +147,39 @@ export default createStore({
         }
       } catch (err) {
         commit("setMessage", err.toString());
+        console.log(err);
+      }
+    },
 
+    async createAssignment({ commit }, data) {
+      commit("setMessage", null);
+      const requestOptions = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      };
+      console.log(data);
+      try {
+        const response = await fetch(
+          "http://localhost:8080/Assignment/",
+          requestOptions
+        );
+        console.log(response);
+        if (response.ok) {
+          const dataResponse = await response.text();
+          console.log(dataResponse);
+          commit("setMessage", response.message);
+          commit("setMessage", dataResponse);
+        } else {
+          const dataResponse = await response.json();
+          console.log(dataResponse);
+          commit("setMessage", dataResponse.message);
+        }
+      } catch (err) {
+        commit("setMessage", err.toString());
         console.log(err);
       }
     },

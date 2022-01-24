@@ -43,7 +43,7 @@
             <Button
               v-if="$store.state.isLogged"
               title="Vokabel speichern"
-              :clickedListener="addVocabulary"
+              :clickedListener="createAssignment"
             />
           </div>
           <div style="margin: 10px">
@@ -114,7 +114,12 @@ export default {
       router.push("/login");
     }
 
-    function addVocabulary() {
+    function createAssignment() {
+      store.dispatch("createAssignment", {
+        userId: store.state.currentUser.id,
+        vocaId: store.state.currentVocabulary.id,
+      });
+
       store.commit("setMessage", "Vokabel gespeichert!");
     }
 
@@ -124,7 +129,7 @@ export default {
       englishVoca,
       deleteClicked,
       linkToLogin,
-      addVocabulary,
+      createAssignment,
     };
   },
 };

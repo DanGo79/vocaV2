@@ -35,7 +35,7 @@ public class UserVocaAssignmentService {
                         findUser(userVocaAssignmentRequest),
                         findVoca(userVocaAssignmentRequest));
         if (userVocabularyAssignment.isPresent()) {
-            return "Die Zuordnung befindet sich bereits in deiner Liste.";
+            throw new IllegalStateException("Die Zuordnung befindet sich bereits in deiner Liste.");
         } else {
             UserVocaAssignment userVocaAssignment = new UserVocaAssignment();
             userVocaAssignment.setUser(findUser(userVocaAssignmentRequest));
@@ -44,7 +44,7 @@ public class UserVocaAssignmentService {
                 userVocabularyAssignmentRepo.save(userVocaAssignment);
             } catch (Exception exc) {
                 System.out.println("Speicher der Zuordnung fehlgeschlagen");
-                return "Speicher der Zuordnung fehlgeschlagen";
+                throw new IllegalStateException("Speicher der Zuordnung fehlgeschlagen");
             }
             return "Die Vokabel wurde deiner Liste hinzugefügt.";
         }

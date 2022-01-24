@@ -5,7 +5,7 @@
         <Link to="/translate" title="Home" />
       </div>
       <div>
-        <div v-if="!$store.state.isLoggedIn">
+        <div v-if="!$store.state.isLogged">
           <Link to="/login" title="Login" />
           <Link to="/register" title="Register" />
         </div>
