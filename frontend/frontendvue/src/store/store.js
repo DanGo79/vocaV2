@@ -4,7 +4,7 @@ import router from "@/router";
 export default createStore({
   state() {
     return {
-      myVocabulary: [],
+      myVocabularys: [null],
       isLogged: localStorage.getItem("isLogged"),
       message: "",
       currentVocabulary: { nameGerman: "" },
@@ -27,6 +27,13 @@ export default createStore({
     },
     addVocabulary(state, vocabulary) {
       state.currentVocabulary = vocabulary;
+    },
+    addVocabularyList(state, vocabularyList) {
+      state.myVocabularys = vocabularyList;
+      console.log(state.myVocabularys);
+    },
+    getVocabularyList() {
+      //state.message = state.myVocabulary.getItem(0).toString;
     },
     addUser(state, user) {
       state.currentUser = user;
@@ -176,6 +183,39 @@ export default createStore({
         } else {
           const dataResponse = await response.json();
           console.log(dataResponse);
+          commit("setMessage", dataResponse.message);
+        }
+      } catch (err) {
+        commit("setMessage", err.toString());
+        console.log(err);
+      }
+    },
+
+    async getAssignmentList({ commit }, data) {
+      const requestOptions = {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      };
+
+      try {
+        const response = await fetch(
+          "http://localhost:8080/Assignment/getAssignmentList/",
+          requestOptions
+        );
+
+        if (response.ok) {
+          const dataResponse = await response.json();
+
+          commit("addVocabularyList", dataResponse);
+          //commit("getVocabularyList");
+        } else {
+          const dataResponse = await response.json();
+          console.log(dataResponse);
+
           commit("setMessage", dataResponse.message);
         }
       } catch (err) {

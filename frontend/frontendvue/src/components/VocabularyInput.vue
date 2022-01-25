@@ -86,7 +86,6 @@ export default {
     console.log(store.state.isLogged);
 
     watchEffect(() => {
-      console.log("Hallo");
       germanVoca.value = store.state.currentVocabulary.nameGerman;
       englishVoca.value = store.state.currentVocabulary.nameEnglish;
     });
