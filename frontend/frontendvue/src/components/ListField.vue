@@ -31,17 +31,23 @@
           :title1="myVocabulary.nameEnglish"
           :title2="myVocabulary.nameGerman"
           title3="Lernen"
-          :clickedListener="lernen"
+          :clickedListener="
+            () => {
+              //lernen(myVocabulary);
+
+              $router.push({
+                name: 'Puzzle',
+                params: myVocabulary,
+              });
+            }
+          "
         />
       </div>
       <div class="divBox">
         <div class="divButtons">
           <b-input-group-append>
-            <div style="margin-right: 10px">
-              <Button title="Liste" :clickedListener="getAssignmentList" />
-            </div>
             <div style="margin-left: 10px">
-              <Button to="/register" title="Register" />
+              <Button to="/register" title="Bearbeiten" />
             </div>
           </b-input-group-append>
         </div>
@@ -55,7 +61,7 @@
 
 <script>
 import ListRow from "./ListRow.vue";
-import { ref, watchEffect } from "vue";
+import { watchEffect } from "vue";
 import { useStore } from "vuex";
 import Button from "./Button.vue";
 import MessageText from "./MessageText.vue";
@@ -66,14 +72,15 @@ export default {
   components: { ListRow, Button, MessageText },
   setup() {
     const store = useStore();
-    let myVocabulary = ref("");
-    let password1 = ref("");
+    store.dispatch("getAssignmentList", {
+      userId: store.state.currentUser.id,
+      lernenGelernt: 1,
+    });
+    store.commit("setMessage", "");
 
     //store.commit("setMessage", "");
 
-    watchEffect(() => {
-      myVocabulary.value = store.state.myVocabulary;
-    });
+    watchEffect(() => {});
 
     function getAssignmentList() {
       store.dispatch("getAssignmentList", {
@@ -85,8 +92,6 @@ export default {
 
     return {
       getAssignmentList,
-
-      password1,
     };
   },
 };

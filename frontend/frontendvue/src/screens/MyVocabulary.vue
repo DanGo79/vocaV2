@@ -1,11 +1,19 @@
 <template>
   <div>
     <ListField />
+    <!--
+    <div v-if="$store.state.currentVocabulary.nameEnglish != null">
+      <PuzzleField :word="$store.state.currentVocabulary" />
+    </div>
+    
+    -->
   </div>
 </template>
 
 <script>
 import ListField from "../components/ListField.vue";
+//import PuzzleField from "../components/PuzzleField.vue";
+
 export default {
   name: "My Vocabulary",
   components: { ListField },

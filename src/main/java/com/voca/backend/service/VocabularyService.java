@@ -64,8 +64,6 @@ public class VocabularyService {
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
             con.setRequestProperty("Content-Type", "application/json");
-            String request = con.getResponseMessage();
-            System.out.println(request);
             BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
             String inputLine;
             StringBuffer content = new StringBuffer();
@@ -78,6 +76,9 @@ public class VocabularyService {
             JSONArray arr = obj.getJSONArray("translations");
             for (int i = 0; i < arr.length(); i++) {
                 nameGerman = arr.getJSONObject(i).getString("text");
+                if (nameGerman.isEmpty()) {
+                    throw new IllegalStateException("Das Wort gibt es nicht!");
+                }
             }
             in.close();
             con.disconnect();

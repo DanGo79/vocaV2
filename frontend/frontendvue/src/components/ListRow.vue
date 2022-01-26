@@ -2,12 +2,10 @@
   <b-list-group horizontal>
     <b-list-group-item
       style="width: 150px; height: 28px; padding-top: 0px; padding-bottom: 0px"
-      
       >{{ title1 }}</b-list-group-item
     >
     <b-list-group-item
       style="width: 150px; height: 28px; padding-top: 0px; padding-bottom: 0px"
-      
       >{{ title2 }}</b-list-group-item
     >
     <b-list-group-item
@@ -28,7 +26,6 @@ export default {
     title2: String,
     title3: String,
     clickedListener: Function,
-    
   },
   components: {},
 };

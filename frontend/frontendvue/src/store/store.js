@@ -3,14 +3,21 @@ import router from "@/router";
 
 export default createStore({
   state() {
+    let currentUser;
+    let storedUser = localStorage.getItem("addUser");
+    if (storedUser) {
+      currentUser = JSON.parse(storedUser);
+    }
+
     return {
-      myVocabularys: [null],
+      myVocabularys: [],
       isLogged: localStorage.getItem("isLogged"),
       message: "",
-      currentVocabulary: { nameGerman: "" },
-      currentUser: localStorage.getItem("addUser"),
+      currentVocabulary: { nameGerman: "", nameEnglish: null },
+      currentUser: currentUser,
     };
   },
+
   mutations: {
     setMessage(state, message) {
       state.message = message;
@@ -119,7 +126,6 @@ export default createStore({
     },
 
     async deleteVocabularyAction({ commit }, id) {
-      //so tun als ob wir speichern
       console.log(id);
       commit("removeVocabulary", id);
     },

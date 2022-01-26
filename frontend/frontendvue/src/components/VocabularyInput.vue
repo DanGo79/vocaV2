@@ -4,7 +4,7 @@
       <div>
         <div class="divBox">
           <b-input-group class="inputGroup">
-            <text-field title="Englisch" />
+            <TextField title="Englisch" />
 
             <input-field
               placeholder="Wort in Englisch eingeben"
@@ -24,7 +24,7 @@
 
         <div class="divBox">
           <b-input-group class="inputGroup">
-            <text-field title="Deutsch" />
+            <TextField title="Deutsch" />
             <input-field
               placeholder="Deutsche Übersetzung"
               v-model="germanVoca"
