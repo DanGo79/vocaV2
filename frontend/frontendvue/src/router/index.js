@@ -4,6 +4,8 @@ import Register from "@/screens/Register";
 import Login from "@/screens/Login";
 import Translate from "@/screens/Translate";
 import AboutVue from "../screens/About.vue";
+import MyVocabularyVue from "../screens/MyVocabulary.vue";
+import PuzzleVue from "../screens/Puzzle.vue";
 
 const routes = [
   {
@@ -30,6 +32,17 @@ const routes = [
     path: "/about",
     name: "About",
     component: AboutVue,
+  },
+  {
+    path: "/myVocabulary",
+    name: "MyVocabulary",
+    component: MyVocabularyVue,
+  },
+  {
+    path: "/puzzle",
+    name: "Puzzle",
+    component: PuzzleVue,
+    props: true,
   },
 ];
 

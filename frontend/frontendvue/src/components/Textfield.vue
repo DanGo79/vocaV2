@@ -1,5 +1,5 @@
 <template >
-  <div class="input-group-text" type="text">{{ title }}</div>
+  <div class="input-group-text notselectable" type="text">{{ title }}</div>
 </template>
 <script>
 export default {

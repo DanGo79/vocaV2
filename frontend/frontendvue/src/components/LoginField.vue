@@ -10,7 +10,11 @@
             />
           </div>
           <div class="inputField">
-            <input-field placeholder="Passwort" v-model="password1" />
+            <input-field
+              type="password"
+              placeholder="Passwort"
+              v-model="password1"
+            />
           </div>
         </div>
       </div>
