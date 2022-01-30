@@ -16,9 +16,9 @@
             :key="char"
             class="notselectable"
             :style="{
-              backgroundColor: `rgb(${char.background}, ${0}, ${0})`,
+              backgroundColor: `rgb(${char.background} 0 0 / ${'100%'})`,
               color: 'rgb(212, 212, 218)',
-              fontWeight: bolder,
+              fontWeight: bold,
             }"
             >{{ char.char }}
           </b-list-group-item>
@@ -31,8 +31,7 @@
           :key="char"
           class="notselectable"
           :style="{
-            backgroundColor: `rgb(${0}, ${256}, ${0})`,
-            fontWeight: bolder,
+            backgroundColor: `rgb(0 ${256} 0 / 100%)`,
           }"
           >{{ char.char }}
         </b-list-group-item>

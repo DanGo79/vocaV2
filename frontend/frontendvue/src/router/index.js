@@ -6,6 +6,7 @@ import Translate from "@/screens/Translate";
 import AboutVue from "../screens/About.vue";
 import MyVocabularyVue from "../screens/MyVocabulary.vue";
 import PuzzleVue from "../screens/Puzzle.vue";
+import Translations from "../screens/Translations.vue";
 
 const routes = [
   {
@@ -28,6 +29,12 @@ const routes = [
     name: "Translate",
     component: Translate,
   },
+  {
+    path: "/translations",
+    name: "Translations",
+    component: Translations,
+  },
+
   {
     path: "/about",
     name: "About",
