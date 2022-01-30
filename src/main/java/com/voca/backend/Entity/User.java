@@ -21,6 +21,7 @@ public class User {
     //@Column(unique = true)
     private String email;
 
+
     @JsonIgnore
     @OneToMany(mappedBy = "user")
     Set<UserVocaAssignment> userVocaAssignment;
