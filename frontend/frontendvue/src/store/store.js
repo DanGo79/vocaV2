@@ -215,7 +215,7 @@ export default createStore({
 
         if (response.ok) {
           const dataResponse = await response.json();
-
+          console.log(dataResponse);
           commit("addVocabularyList", dataResponse);
           //commit("getVocabularyList");
         } else {

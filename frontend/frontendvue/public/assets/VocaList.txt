@@ -1,0 +1,2 @@
+{"id":38,"nameEnglish":"cat","nameGerman":"Katze","profilBild":null}
+{"id":39,"nameEnglish":"car","nameGerman":"Auto","profilBild":null}
