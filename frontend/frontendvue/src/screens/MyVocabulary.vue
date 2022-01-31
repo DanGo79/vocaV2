@@ -1,10 +1,11 @@
 <template>
   <div>
     <ListField />
+    <a href="/Handbuch/V_1-01.pdf" download="Handbuch.pdf"
+      >Liste herunterladen ...</a
+    >
+
     <!--
-    <div v-if="$store.state.currentVocabulary.nameEnglish != null">
-      <PuzzleField :word="$store.state.currentVocabulary" />
-    </div>
     
     -->
   </div>
