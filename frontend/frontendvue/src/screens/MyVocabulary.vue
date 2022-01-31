@@ -1,9 +1,7 @@
 <template>
   <div>
     <ListField />
-    <a href="/Handbuch/V_1-01.pdf" download="Handbuch.pdf"
-      >Liste herunterladen ...</a
-    >
+    <a href="assets/user.xml" download="user.xml">Liste herunterladen ...</a>
 
     <!--
     

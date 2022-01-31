@@ -47,7 +47,7 @@
         <div class="divButtons">
           <b-input-group-append>
             <div style="margin-left: 10px">
-              <Button to="/register" title="Bearbeiten" />
+              <Button title="Bearbeiten" :clickedListener="saveTextFile" />
             </div>
           </b-input-group-append>
         </div>
@@ -90,8 +90,16 @@ export default {
       console.log("Button was clicked");
     }
 
+    function saveTextFile() {
+      var FileSaver = require(" file-saver ");
+      var blob = new Blob([" Hallo Welt! "], {
+        type: " text/plain;charset=utf-8 ",
+      });
+      FileSaver.saveAs(blob, " Hallo Welt.txt ");
+    }
     return {
       getAssignmentList,
+      saveTextFile,
     };
   },
 };
