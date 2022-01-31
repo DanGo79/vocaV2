@@ -47,7 +47,14 @@
         <div class="divButtons">
           <b-input-group-append>
             <div style="margin-left: 10px">
-              <Button title="Bearbeiten" :clickedListener="saveTextFile" />
+              <Button
+                title="Liste downloaden"
+                :clickedListener="saveTextFile"
+              />
+            </div>
+
+            <div style="margin-left: 10px">
+              <Button title="Liste upload" :clickedListener="importTextFile" />
             </div>
           </b-input-group-append>
         </div>
@@ -65,6 +72,7 @@ import { watchEffect } from "vue";
 import { useStore } from "vuex";
 import Button from "./Button.vue";
 import MessageText from "./MessageText.vue";
+import { saveAs } from "file-saver";
 
 export default {
   name: "ListField",
@@ -91,15 +99,83 @@ export default {
     }
 
     function saveTextFile() {
-      var FileSaver = require(" file-saver ");
-      var blob = new Blob([" Hallo Welt! "], {
-        type: " text/plain;charset=utf-8 ",
+      let result = "";
+      store.state.myVocabularys.forEach((element) => {
+        result += JSON.stringify(element);
+        result += "\n";
       });
-      FileSaver.saveAs(blob, " Hallo Welt.txt ");
+
+      var blob = new Blob([result], {
+        type: "application/xhtml+xml;charset=utf-8 ",
+      });
+      saveAs(blob, "VocaList.txt");
+    }
+
+    function importTextFile() {
+      let url = "assets/VocaList.txt";
+      let array = [];
+      fetch(url)
+        .then((response) => response.text())
+        .then((data) => {
+          array = data.split("\n");
+          array.forEach((element) => {
+            let obj = JSON.parse(element);
+            console.log(obj);
+            store.state.myVocabularys.push(obj);
+          });
+
+          console.log(store.state.myVocabularys);
+        });
+
+      store.commit("addVocabularyList", array);
+    }
+
+    function saveXMLFile() {
+      let result = '<?xml version="1.0" encoding="UTF-8"?>\n';
+      result += "<Vocabularies>\n";
+      store.state.myVocabularys.forEach((element) => {
+        result += "    <Vocaular>\n";
+        for (let key of Object.keys(element)) {
+          result += `        <${key}>${element[key]}</${key}>\n`;
+        }
+        result += "    </Vocular>\n";
+      });
+      result += "</Vocabularies>";
+      var blob = new Blob([result], {
+        type: "application/xhtml+xml;charset=utf-8 ",
+      });
+      saveAs(blob, "result.xml");
+    }
+
+    function saveExcelFile() {
+      axios
+        .post(
+          config.backendHost + "/excel",
+          {
+            file_name: fileName,
+          },
+          {
+            responseType: "blob",
+          }
+        )
+        .then((response) => {
+          const url = URL.createObjectURL(
+            new Blob([response.data], {
+              type: "application/vnd.ms-excel",
+            })
+          );
+          const link = document.createElement("a");
+          link.href = url;
+          link.setAttribute("download", fileName);
+          document.body.appendChild(link);
+          link.click();
+        });
     }
     return {
       getAssignmentList,
+      saveXMLFile,
       saveTextFile,
+      importTextFile,
     };
   },
 };
