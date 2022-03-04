@@ -5,6 +5,10 @@
         <TextField :title="$route.params.nameGerman" />
       </div>
 
+      <div>
+        <!--rating with 4 Stars boostrap-->
+      </div>
+
       <div class="divBox" v-if="!won">
         <draggable
           class="list-group list-group-horizontal"

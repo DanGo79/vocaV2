@@ -15,6 +15,7 @@
       @click="clickedListener"
       >{{ title3 }}</b-list-group-item
     >
+    <b-badge variant="primary" pill>{{ gelernt }}</b-badge>
   </b-list-group>
 </template>
 
@@ -25,6 +26,7 @@ export default {
     title1: String,
     title2: String,
     title3: String,
+    gelernt: Number,
     clickedListener: Function,
   },
   components: {},

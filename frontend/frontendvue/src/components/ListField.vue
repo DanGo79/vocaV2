@@ -26,17 +26,18 @@
       </div>
       <div>
         <ListRow
-          v-for="myVocabulary in $store.state.myVocabularys"
+          v-for="myVocabulary in vocaList"
           :key="myVocabulary.id"
           :title1="myVocabulary.nameEnglish"
           :title2="myVocabulary.nameGerman"
           title3="Lernen"
+          :gelernt="myVocabulary.gelernt"
           :clickedListener="
             () => {
               //lernen(myVocabulary);
 
               $router.push({
-                name: 'Puzzle',
+                name: 'ListField',
                 params: myVocabulary,
               });
             }
@@ -76,7 +77,8 @@ import { saveAs } from "file-saver";
 
 export default {
   name: "ListField",
-  props: {},
+  
+
   components: { ListRow, Button, MessageText },
   setup() {
     const store = useStore();
@@ -85,6 +87,8 @@ export default {
       lernenGelernt: 1,
     });
     store.commit("setMessage", "");
+
+let vocaList = store.state.myVocabularys;
 
     //store.commit("setMessage", "");
 
@@ -152,6 +156,8 @@ export default {
       saveXMLFile,
       saveTextFile,
       importTextFile,
+      vocaList,
+
     };
   },
 };
