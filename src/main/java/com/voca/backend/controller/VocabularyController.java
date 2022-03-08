@@ -21,7 +21,7 @@ public class VocabularyController {
     }
 
     @GetMapping
-    public List vocabularyList() {
+    public List<Vocabulary> vocabularyList() {
         return vocabularyService.getVocabularyList();
     }
 

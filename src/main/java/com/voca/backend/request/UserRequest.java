@@ -1,7 +1,5 @@
 package com.voca.backend.request;
 
-import javax.persistence.Column;
-
 public class UserRequest {
 
     private Integer id;

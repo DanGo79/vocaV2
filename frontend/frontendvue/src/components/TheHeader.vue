@@ -21,6 +21,7 @@
   </header>
 </template>
 <script>
+import { useRouter } from 'vue-router';
 import store from "../store/store";
 import Link from "./Link.vue";
 
@@ -29,9 +30,11 @@ export default {
   components: { Link },
 
   setup() {
+    const router = useRouter()
     function logout() {
       console.log("CALLED_");
       store.commit("setLoggedOut");
+      router.push({ name: 'Login' });
     }
     return {
       logout,

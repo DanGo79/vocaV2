@@ -59,7 +59,7 @@ public class VocabularyService {
 
     public String translateWord(String nameEnglish) {
         try {
-            URL url = new URL("https://api-free.deepl.com/v2/translate?auth_key=9dcff541-835a-4c05-6b9c-2d7a6ed73d2b&text="
+            URL url = new URL("https://api-free.deepl.com/v2/translate?auth_key=TOKEN&text="
                     + nameEnglish + "&target_lang=de&source_lang=en");
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
             con.setRequestMethod("GET");
@@ -95,11 +95,12 @@ public class VocabularyService {
         try {
             vocabularyRepo.save(newVocabulary);
         } catch (Exception exc) {
+            //todo
         }
         return newVocabulary;
     }
 
-    public List getVocabularyList() {
+    public List<Vocabulary> getVocabularyList() {
         return vocabularyRepo.findAll();
     }
 

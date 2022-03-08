@@ -31,13 +31,13 @@
           :title1="myVocabulary.nameEnglish"
           :title2="myVocabulary.nameGerman"
           title3="Lernen"
-          :gelernt="myVocabulary.gelernt"
+          :gelernt="3"
           :clickedListener="
             () => {
               //lernen(myVocabulary);
 
               $router.push({
-                name: 'ListField',
+                name: 'Puzzle',
                 params: myVocabulary,
               });
             }
@@ -69,7 +69,7 @@
 
 <script>
 import ListRow from "./ListRow.vue";
-import { watchEffect } from "vue";
+import { computed, watchEffect } from "vue";
 import { useStore } from "vuex";
 import Button from "./Button.vue";
 import MessageText from "./MessageText.vue";
@@ -87,8 +87,6 @@ export default {
       lernenGelernt: 1,
     });
     store.commit("setMessage", "");
-
-let vocaList = store.state.myVocabularys;
 
     //store.commit("setMessage", "");
 
@@ -156,8 +154,7 @@ let vocaList = store.state.myVocabularys;
       saveXMLFile,
       saveTextFile,
       importTextFile,
-      vocaList,
-
+      vocaList: computed(() => store.state.myVocabularys),
     };
   },
 };

@@ -31,6 +31,7 @@ export default createStore({
       state.isLogged = false;
       localStorage.setItem("isLogged", false);
       localStorage.removeItem("addUser");
+      state.myVocabularys = [];
     },
     addVocabulary(state, vocabulary) {
       state.currentVocabulary = vocabulary;
